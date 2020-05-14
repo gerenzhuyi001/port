@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout09</title>
+    <style>
+        .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+        li, ol, ul, menu{list-style: none;}
+        
+        #wrap { }
+        #header {height: 100px; background-color: #b2ebf2; }
+        #banner {height: 300px; background-color: #80deea; }
+        
+        #content1 {height: 500px; background-color: #4dd0e1; }
+        #content1 .container {overflow: hidden;}
+        #content1 .container .cont {padding-top: 100px; overflow: hidden;}
+        #content1 .container .cont div {float: left; width: 240px; margin: 10px 5px 0; height: 200px; background-color: #ffeb3b;}
+        
+        #content2 {height: 200px; background-color: #26c6da; }
+        
+        #content3 {overflow: hidden; height: 300px; background-color: #00bcd4; }
+        #content3 .notice1 {float: left; margin: 0 5px 0 10px; position: relative; border: 1px solid #e1f5fe; background-color: #e1f5fe; width: 482px; height: 200px;}
+        #content3 .notice1 h4 { margin-left: 18px; font-weight: bold; font-size: 15px; color: #0093bd;}
+        #content3 .notice1 ul {overflow: hidden;}
+        #content3 .notice1 li {}
+        #content3 .notice1 li a {float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 75%;}
+        #content3 .notice1 .more { position: absolute; display: inline-block; width: 17px; height: 17px; right: 20px; top: 20px; background: url(site-webstandard/img/icon.png) -150px -90px;}
+        
+        #content3 .notice2 {margin: 0 10px 0 5px; float: left; position: relative; border: 1px solid #e1f5fe; background-color: #e1f5fe; width: 482px; height: 200px;}
+        #content3 .notice2 h4 {border: 1px solid #ccc; padding: 10px 8px; margin: 15px 10px -10px 18px; font-weight: bold; font-size: 16px; color: #0093bd;}
+        #content3 .notice2 strong {color: #d81b60;}
+        #content3 .notice2 ul {border: 1px solid #ccc; padding: 10px 8px; margin: 9px 10px 0 18px; }
+        #content3 .notice2 li {overflow: hidden; margin: 8px; background-image: url(site-webstandard/img/dot.gif) no-repeat 0 -8; }
+        #content3 .notice2 li a {font-size: 16px; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 45%;}
+        #content3 .notice2 li span {float: right; width: 18% }
+        #content3 .notice2 .more {position: absolute; display: inline-block; right: 20px; top: 25px; }
+        
+        
+        #footer {height: 150px; background-color: #00acc1; }
+        .container {height: inherit; width: 1000px; margin: 0 auto; background-color: rgba(0,0,0,0.3);}
+        
+        
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <div id="content1">
+            <div class="container">
+               <div class="cont">
+                    <div class="col1"></div>
+                    <div class="col2"></div>
+                    <div class="col3"></div>
+                    <div class="col4"></div>
+                    <div class="col5"></div>
+                    <div class="col6"></div>
+                    <div class="col7"></div>
+                    <div class="col8"></div>
+                </div>
+            </div>
+        </div>
+        <div id="content2">
+            <div class="container"></div>
+        </div>
+        <div id="content3">
+            <div class="container">
+                <div class="notice1">
+                    <h4>웹 퍼블리셔 면접 질문</h4>
+                    <ul>
+                        <li><a href="#">dispaly: inline과 display, black의 차이점은 무엇여병</a></li>
+                        <li><a href="#">HTML 태그 중에 dl, dd, ul, li, ol의 차이점 ㄹㅇㄴㅁㄹ</a></li>
+                        <li><a href="#">HTML 태그 중에 strong과 em 태그의 차이점 얾노어ㅓㅎ</a></li>
+                        <li><a href="#">컨텐츠 요소를 가운데로 오게 하는 방법을 알앙롱너ㅏㅁㅎ</a></li>
+                        <li><a href="#">독타입을 선언하는 이유에 대해서 설명하세요!</a></li>
+                    </ul>
+                    <div class="more ir_pm">더보기</div>
+                </div>
+              <div class="notice2">
+                    <h4>최신 <strong>공지사항</strong></h4>
+                    <ul>
+                        <li><a href="#">JPG,PNG,GIF의 차이점어쩌고</a><span>2020.03.27</span></li>
+                        <li><a href="#">UI 디자인과 UX 디자인놀ㄴ미ㅏㅗㅎ </a><span>2020.03.27</span></li>
+                        <li><a href="#">인터렉션 디자인의 핵심엿엿엿</a><span>2020.03.27</span></li>
+                    </ul>
+                    <div class="more">더보기</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>
