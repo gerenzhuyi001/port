@@ -7,12 +7,12 @@
     <meta name="author" content="webstoryboy">
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
     <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
-    <title>웹스토리보이 | Webstoryboy | Sample</title>
+    <title>웹스토리보이 | Webstoryboy | Animation</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../assets/css/docs.min.css" rel="stylesheet">
-    <link href="../assets/css/prism.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../../assets/css/prism.css" rel="stylesheet">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
@@ -48,9 +48,9 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.../../assets2/js/1.4.2/respond.min.js"></script>
+   <![endif]-->
 </head>
 
 <body>
@@ -81,7 +81,7 @@
 
     <div class="bs-header bgs3" id="content">
         <div class="container">
-            <h1>Illustrator Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>Animation Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="https://webstoryboy.co.kr" target="_blank">webstoryboy.co.kr</a></p>
         </div>
     </div>
@@ -227,68 +227,93 @@
                     </div>
                 </div>
                 <!-- //Intro1 -->
-                
+                <style>
+                    .sBox > div {
+                        width: 60px; height: 60px; 
+                        background-image: linear-gradient(145deg, #fbc2eb 0%, #a6c1ee 100%);
+                        text-align: center; color:#fff;
+                        line-height: 60px;
+                        border-radius: 50%;
+                        margin: 10px;
+                        position: relative;
+                    }
+                    .btn { 
+                        color: #fff;
+                        background-image: linear-gradient(145deg, #fbc2eb 0%, #a6c1ee 100%); 
+                    }
+                </style>
+                <style>
+                    .circle1.show {animation: move 2s 1 linear;}
+                    .circle2.show {animation: move 2s 1 ease;}
+                    .circle3.show {animation: move 2s 1 ease-in;}
+                    .circle4.show {animation: move 2s 1 ease-out;}
+                    .circle5.show {animation: move 2s 1 ease-in-out;}
+                    @keyframes move {
+                        0% {left: 0%;}
+                        50% {left: calc(100% - 30px);}
+                        100% {left: 0%;}
+                    }
+                </style>
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">SAMPLE</h2>
-                    <p class="bs-callout bs-callout-info"></p>
+                    <h2 id="intro1" class="page-header">Animation-timing-function <span class="btn" id="btn1">Click</span></h2>
+                    <div class="sBox s1">
+                        <div class="circle1">linear</div>
+                        <div class="circle2">ease</div>
+                        <div class="circle3">ease-in</div>
+                        <div class="circle4">ease-out</div>
+                        <div class="circle5">ease-in-out</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle1.show {animation: move 2s 1 linear;}
+.circle2.show {animation: move 2s 1 ease;}
+.circle3.show {animation: move 2s 1 ease-in;}
+.circle4.show {animation: move 2s 1 ease-out;}
+.circle5.show {animation: move 2s 1 ease-in-out;}
+@keyframes move {
+    0% {left: 0%;}
+    50% {left: calc(100% - 30px);}
+    100% {left: 0%;}
+}
+</code></pre>
                 </div>
-				<!-- //Intro2 -->
+                <!-- //Intro2 -->
+                <style>
+                    .circle6.show {animation: move 3s 1 step-start;}
+                    .circle7.show {animation: move 3s 1 step-end;}
+                    .circle8.show {animation: move 3s 1 steps(4, start);}
+                    .circle9.show {animation: move 3s 1 steps(4, end);}
+                    .circle10.show {animation: move 3s 1 steps(10, start);}
+                    .circle11.show {animation: move 3s 1 steps(10, end);}
+                </style>
                 
-                <!-- Intro3 -->
+                <!-- Intro3-->
                 <div class="bs-docs-section">
-					<h2 id="intro3" class="page-header">SAMPLE</h2>
-                    <p class="bs-callout bs-callout-info"></p>
-				</div>
-				<!-- //Intro3 -->
+                    <h2 id="intro3" class="page-header">Animation-timing-function <span class="btn" id="btn2">Click</span></h2>
+                    <div class="sBox s2">
+                        <div class="circle6">step-start</div>
+                        <div class="circle7">step-end</div>
+                        <div class="circle8">steps(4, start)</div>
+                        <div class="circle9">steps(4, end)</div>
+                        <div class="circle10">steps(10, start)</div>
+                        <div class="circle11">steps(10, end)</div>
+                    </div>
+<pre class="line-numbers language-css"><code>.circle1.show {animation: move 2s 1 linear;}
+.circle2.show {animation: move 2s 1 ease;}
+.circle3.show {animation: move 2s 1 ease-in;}
+.circle4.show {animation: move 2s 1 ease-out;}
+.circle5.show {animation: move 2s 1 ease-in-out;}
+@keyframes move {
+    0% {left: 0%;}
+    50% {left: calc(100% - 30px);}
+    100% {left: 0%;}
+}
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+
                 
-                <!-- Intro4 -->
-                <div class="bs-docs-section">
-					<h2 id="intro4" class="page-header">SAMPLE</h2>
-                    <p class="bs-callout bs-callout-info"></p>
-				</div>
-				<!-- //Intro4 -->
-                
-                <!-- Intro5 -->
-                <div class="bs-docs-section">
-					<h2 id="intro5" class="page-header">SAMPLE</h2>
-                    <p class="bs-callout bs-callout-info"></p>
-				</div>
-                <!-- //Intro5 -->
-                <!-- Intro6 -->
-                <div class="bs-docs-section">
-					<h2 id="intro6" class="page-header">SAMPLE</h2>
-                    <p class="bs-callout bs-callout-info"></p>
-				</div>
-                <!-- //Intro6 -->
-                <!-- Intro7 -->
-                <div class="bs-docs-section">
-					<h2 id="intro7" class="page-header">SAMPLE</h2>
-                    <p class="bs-callout bs-callout-info"></p>
-				</div>
-                <!-- //Intro7 -->
-                <!-- Intro8 -->
-                <div class="bs-docs-section">
-					<h2 id="intro8" class="page-header">Sample</h2>
-					<p class="bs-callout bs-callout-info"></p>
-                    <p></p>
-				</div>
-                <!-- //Intro8 -->
-                <!-- Intro9 -->
-                <div class="bs-docs-section">
-					<h2 id="intro9" class="page-header">Sample</h2>
-					<p class="bs-callout bs-callout-info"></p>
-                    <p></p>
-				</div>
-                <!-- //Intro9 -->
-                <!-- Intro10 -->
-                <div class="bs-docs-section">
-					<h2 id="intro10" class="page-header">Sample</h2>
-					<p class="bs-callout bs-callout-info"></p>
-                    <p></p>
-				</div>
-                <!-- //Intro10 -->
-                
+               
 
                 
             </div>
@@ -299,16 +324,7 @@
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">Parallax01</a></li>
-                        <li><a href="#intro2">Sample</a></li>                 
-                        <li><a href="#intro3">Sample</a></li>
-                        <li><a href="#intro4">Sample</a></li>
-                        <li><a href="#intro5">Sample</a></li>
-                        <li><a href="#intro6">Sample</a></li>
-                        <li><a href="#intro7">Sample</a></li>
-                        <li><a href="#intro8">Sample</a></li>
-                        <li><a href="#intro9">Sample</a></li>
-                        <li><a href="#intro10">Sample</a></li>
+                        <li><a href="#intro1">Animation</a></li>
                     </ul>
                 </div>
             </div>
@@ -337,10 +353,18 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/docs.min.js"></script>
-    <script src="../assets/js/prism.js"></script>
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script src="../../assets/js/prism.js"></script>
+    <script>
+        $("#btn1").click(function(){
+            $(".sBox.s1 > div").addClass("show");
+        });
+        $("#btn2").click(function(){
+            $(".sBox.s2 > div").addClass("show");
+        });
+    </script>
 </body>
 
 </html>
