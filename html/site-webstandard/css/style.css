@@ -229,13 +229,13 @@
 #login-wrap {background-color: #f2f4f5; padding: 15px; }
 .login-header {overflow: hidden; font-size: 12px; height: 24px;}
 .login-header .lh-check {float: left; padding-right: 15px; }
-.login-header .lh-check input-check{vertical-align: -2px;}
+.login-header .lh-check input-check {vertical-align: -2px;}
 .login-header .lh-ip {float: left; }
 .login-header .lh-ip stong {color: #0093bd;}
 
 .login-content {position: relative; }
-.login-content .lc-text .input-text { width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 2px; background: #fff; }
-.login-content .lc-text .ic-btn {position: absolute; right: 0;top: 0;width: 62px; height: 46px; background: #fff; border: 1px solid #bebebe; }
+.login-content .lc-text .input-text {width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 2px; background: #fff; }
+.login-content .lc-text .ic-btn {position: absolute; right: 0;top: 0; width: 62px; height: 46px; background: #fff; border: 1px solid #bebebe; }
 
 .login-footer {margin-top: 5px; }
 .login-footer li {position: relative; display: inline; padding-right: 5px;}
