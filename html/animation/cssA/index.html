@@ -256,7 +256,7 @@
                 </style>
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Animation-timing-function <span class="btn" id="btn1">Click</span></h2>
+                    <h2 id="intro2" class="page-header">Animation-timing-function <span class="btn" id="btn1">Click</span></h2>
                     <div class="sBox s1">
                         <div class="circle1">linear</div>
                         <div class="circle2">ease</div>
@@ -297,17 +297,19 @@
                         <div class="circle10">steps(10, start)</div>
                         <div class="circle11">steps(10, end)</div>
                     </div>
-<pre class="line-numbers language-css"><code>.circle1.show {animation: move 2s 1 linear;}
-.circle2.show {animation: move 2s 1 ease;}
-.circle3.show {animation: move 2s 1 ease-in;}
-.circle4.show {animation: move 2s 1 ease-out;}
-.circle5.show {animation: move 2s 1 ease-in-out;}
-@keyframes move {
-    0% {left: 0%;}
-    50% {left: calc(100% - 30px);}
-    100% {left: 0%;}
-}
+<pre class="line-numbers language-css"><code>.circle6.show {animation: move 3s 1 step-start;}
+.circle7.show {animation: move 3s 1 step-end;}
+.circle8.show {animation: move 3s 1 steps(4, start);}
+.circle9.show {animation: move 3s 1 steps(4, end);}
+.circle10.show {animation: move 3s 1 steps(10, start);}
+.circle11.show {animation: move 3s 1 steps(10, end);}
 </code></pre>
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="gerenzhuyi" data-slug-hash="QWjVwEZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animation steps">
+    <span>See the Pen <a href="https://codepen.io/gerenzhuyi/pen/QWjVwEZ">
+    Animation steps</a> by Suwan (<a href="https://codepen.io/gerenzhuyi">@gerenzhuyi</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                 </div>
                 <!-- //Intro3 -->
 
@@ -325,6 +327,8 @@
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
                         <li><a href="#intro1">Animation</a></li>
+                        <li><a href="#intro2">Animation-timing-function</a></li>
+                        <li><a href="#intro3">Animation-timing-function</a></li>
                     </ul>
                 </div>
             </div>
