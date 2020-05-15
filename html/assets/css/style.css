@@ -273,27 +273,18 @@
 	list-style: none;
 }
 .gridly li a {
-	color: #157ed3;
-	display: block;
-    border: 3px solid #a5d5fa; transition: all 0.25s; background: none;
-    border-radius: 20px;
-    margin-right: 20px;
-    font-size: 26px;
-    padding: 3px 15px;
+	text-decoration: none; 
+	color:#494e51; 
+	display: block; 
+	margin-right: 20px; 
 }
-.gridly li a:hover {box-shadow: inset 0 0 0 40px #a5d5fa;}
 
 .gridly .webstandard a {
 	color: #157ed3;
 	display: block;
-    border: 3px solid #a5d5fa; transition: all 0.25s; background: none;
-    border-radius: 20px;
-    margin-right: 20px;
-    font-size: 26px;
-    padding: 3px 15px;
+	border-bottom: 3px solid #a5d5fa;
+	margin-right: 20px;
 } 
-.gridly .webstandard a:hover {box-shadow: inset 0 0 0 40px #a5d5fa;}
-
 .gridly .html5 a {
 	color: #8432c4;
 	display: block;
