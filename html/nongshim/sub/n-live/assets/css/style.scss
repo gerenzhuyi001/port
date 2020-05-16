@@ -178,22 +178,46 @@
     }
 
     .swiper-wrapper {
-        
+       text-align: center;
         .swiper-slide {
             position: relative;
             margin-top: 200px;
-            h2 {
+            span.box {
                 position: absolute;
-                top: 15%; left: 41%;   
-                font-size: 48px;
-                color: #ffffff;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.5);
+                z-index: 1;
             }
+            .text {
+                position: absolute;
+                left: 9%; top: 15%;
+                z-index: 2;
+                text-align: left;
+                .tit {
+                    display: block;
+                    font-size: 48px;
+                    color: #ffffff; 
+                }
+                .p {
+                    display: block;
+                    font-size: 20px;
+                    color: #fff;
+                    padding-top: 40px;
+                }
+            }
+            
             a {
                 img {
                     height: 100%;
                     width: 80%;
                 }
             }
+        }
+
+        .swiper-button-prev {
+            background-image: url(../img/banner1.jpg);
         }
     }
 }
@@ -260,7 +284,7 @@
                 padding: 25px 60px;
                 
                 a {
-                    position: relative;
+                    
                     color: 222px;
                     font-size: 16px;
                     font-weight: 700;
@@ -269,21 +293,24 @@
 
                 .selected {
                     color: #000;
-                    
-                
-                    &::after {
+                    text-align: center;
+                    position: relative;
+                    span {
+                        display: inline-block;
                         position: absolute;
-                        content: '';
-                        width: 6px; height: 6px;
-                        vertical-align:middle;
+                        left:50%; bottom: -37px;
+                        transform: translate(-50%, -50%);
                         border: 1px solid #da1009;
-                        background: #da1009;
                         border-radius: 50%;
-
-                    }    
+                        background: #da1009;
+                        width: 6px; height: 6px;
+                    }
+                    
                 }
             }
+            .click {
+                border: 1px solid #c3d9ab;
+             }
         }
     }
 }
-

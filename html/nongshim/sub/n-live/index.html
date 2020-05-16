@@ -114,11 +114,18 @@
             <h3>N.LIVE</h3>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <h2>[슬기로운 백세가족] 백두산 청정 원시림의 좋은 물 백산수</h2>
-                    <a href="https://www.youtube.com/watch?v=8_-eh6USJF4"><img src="assets/img/banner2.jpg" alt=""></a>
+                    <span class='box'></span>
+                    <div class="text">
+                        <span class="tit">내 입맛에 찰지게 착! 찰비빔면, 찰송~ (카피추, 허영지)</h2>
+                        <span class="p"> 오늘 뭐 먹지?? 아직도 헷갈리나요~ 짜~짜라짜짜 비벼! 찰찰찰~ 찰비빔면~ 상큼~한 찰비빔면 내 입맛에 찰지게 착!</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=ziSGJdXLmi4"><img src="assets/img/banner2.jpg" alt=""></a>
                 </div>
                 <div class="swiper-slide">
-                    <h2>회원전용 포인트샵 앵그리짜파구리 큰사발</h2>
+                    <span class='box'></span>
+                    <div class="text">
+                        <span class="tit">회원전용 포인트샵 앵그리짜파구리 큰사발</h2>
+                    </div>
                     <a href="http://www.nongshim.com/promotion/event/point_market"><img src="assets/img/banner1.jpg" alt=""></a>
                 </div>
             </div>
@@ -152,18 +159,44 @@
         <div class="row">
             <div class="options">
                 <ul class="option-set">
-                    <li><a href="#" data-filter-value="" class="options01 selected" >VIEW ALL</a></li>
-                    <li class="options-list"><a href="#" data-filter-value=".homepage" class="options02">HOMEPAGE</a></li>
-                    <li class="options-list"><a href="#" data-filter-value=".facebook" class="options03">FACEBOOK</a></li>
-                    <li class="options-list"><a href="#" data-filter-value=".instagram" class="options04">INSTAGRAM</a></li>
-                    <li class="options-list"><a href="#" data-filter-value=".youtube" class="options05"> YOUTUBE</a></li>
-                    <li class="options-list"><a href="#" data-filter-value=".blog" class="options06">BLOG</a></li>
+                    <li class="options-list click01"><a href="#" data-filter-value="" class="options01 selected " ><span></span> VIEW ALL</a></li>
+                    <li class="options-list click02"><a href="#" data-filter-value=".homepage" class="options02"><span></span>HOMEPAGE</a></li>
+                    <li class="options-list click03"><a href="#" data-filter-value=".facebook" class="options03"><span></span>FACEBOOK</a></li>
+                    <li class="options-list click04"><a href="#" data-filter-value=".instagram" class="options04"><span></span>INSTAGRAM</a></li>
+                    <li class="options-list click05"><a href="#" data-filter-value=".youtube" class="options05"><span></span> YOUTUBE</a></li>
+                    <li class="options-list click06"><a href="#" data-filter-value=".blog" class="options06"><span></span>BLOG</a></li>
                 </ul>
             </div>
         </div>
     </section>
     <!-- //list -->
 
+    <!-- 갤러리 -->
+    <section id="gallery">
+        <div class="row">
+            <div class="gallery">
+                <div class="g-img homepage">
+                    <img src="assets/img/homepage01.jpg" alt="homepage img">
+                        <strong></strong>
+                        <p></p>
+                        <span></span>
+                </div>
+                <div class="g-img homepage">
+                    <img src="assets/img/homepage02.jpg" alt="homepage img">
+                        <strong></strong>
+                        <p></p>
+                        <span></span>
+                </div>
+                <div class="g-img homepage">
+                    <img src="assets/img/homepage03.jpg" alt="homepage img">
+                        <strong></strong>
+                        <p></p>
+                        <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //갤러리 -->
 
 
     <!-- script -->
@@ -173,6 +206,8 @@
     <!-- //script -->
 
     <script>
+
+        // 옵션 클릭
         let options01 = $('#options>.row>.options>ul>li>.options01')
         let options02 = $('#options>.row>.options>ul>li>.options02')
         let options03 = $('#options>.row>.options>ul>li>.options03')
@@ -183,32 +218,45 @@
             e.preventDefault();
             $('#options>.row>.options>ul>li>a').removeClass('selected');
             options01.addClass('selected');
+            $('#options>.row>.options>ul>li').removeClass('click');
+            $('#options>.row>.options>ul>.click01').addClass('click');
         });
         options02.click(function(e){
             e.preventDefault();
             $('#options>.row>.options>ul>li>a').removeClass('selected');
             options02.addClass('selected');
+            $('#options>.row>.options>ul>li').removeClass('click');
+            $('#options>.row>.options>ul>.click02').addClass('click');
         });
         options03.click(function(e){
             e.preventDefault();
             $('#options>.row>.options>ul>li>a').removeClass('selected');
             options03.addClass('selected');
+            $('#options>.row>.options>ul>li').removeClass('click');
+            $('#options>.row>.options>ul>.click03').addClass('click');
         });
         options04.click(function(e){
             e.preventDefault();
             $('#options>.row>.options>ul>li>a').removeClass('selected');
             options04.addClass('selected');
+            $('#options>.row>.options>ul>li').removeClass('click');
+            $('#options>.row>.options>ul>.click04').addClass('click');
         });
         options05.click(function(e){
             e.preventDefault();
             $('#options>.row>.options>ul>li>a').removeClass('selected');
             options05.addClass('selected');
+            $('#options>.row>.options>ul>li').removeClass('click');
+            $('#options>.row>.options>ul>.click05').addClass('click');
         });
         options06.click(function(e){
             e.preventDefault();
             $('#options>.row>.options>ul>li>a').removeClass('selected');
             options06.addClass('selected');
+            $('#options>.row>.options>ul>li').removeClass('click');
+            $('#options>.row>.options>ul>.click06').addClass('click');
         });
+        // 옵션 클릭 끝
     </script>
 
 </body>

@@ -176,22 +176,52 @@
   font-size: 66px;
 }
 
+.swiper-container .swiper-wrapper {
+  text-align: center;
+}
+
 .swiper-container .swiper-wrapper .swiper-slide {
   position: relative;
   margin-top: 200px;
 }
 
-.swiper-container .swiper-wrapper .swiper-slide h2 {
+.swiper-container .swiper-wrapper .swiper-slide span.box {
   position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .text {
+  position: absolute;
+  left: 9%;
   top: 15%;
-  left: 41%;
+  z-index: 2;
+  text-align: left;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .text .tit {
+  display: block;
   font-size: 48px;
   color: #ffffff;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .text .p {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  padding-top: 40px;
 }
 
 .swiper-container .swiper-wrapper .swiper-slide a img {
   height: 100%;
   width: 80%;
+}
+
+.swiper-container .swiper-wrapper .swiper-button-prev {
+  background-image: url(../img/banner1.jpg);
 }
 
 /* 버튼 */
@@ -261,7 +291,6 @@
 }
 
 .row .options .option-set li a {
-  position: relative;
   color: 222px;
   font-size: 16px;
   font-weight: 700;
@@ -270,16 +299,25 @@
 
 .row .options .option-set li .selected {
   color: #000;
+  text-align: center;
+  position: relative;
 }
 
-.row .options .option-set li .selected::after {
+.row .options .option-set li .selected span {
+  display: inline-block;
   position: absolute;
-  content: '';
+  left: 50%;
+  bottom: -37px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid #da1009;
+  border-radius: 50%;
+  background: #da1009;
   width: 6px;
   height: 6px;
-  vertical-align: middle;
-  border: 1px solid #da1009;
-  background: #da1009;
-  border-radius: 50%;
+}
+
+.row .options .option-set .click {
+  border: 1px solid #c3d9ab;
 }
 /*# sourceMappingURL=style.css.map */
