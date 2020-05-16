@@ -182,7 +182,7 @@
   font-size: 66px;
   font-weight: 600;
   bottom: 30px;
-  left: 45%;
+  left: 43%;
 }
 
 .swiper-container .swiper-wrapper {
@@ -350,7 +350,6 @@
 /* 옵션 */
 .row {
   width: 1280px;
-  height: 400px;
   text-align: center;
   margin: 0 auto;
 }
@@ -395,5 +394,54 @@
 
 .row .options .option-set .click {
   border: 1px solid #c3d9ab;
+}
+
+/* 갤러리 */
+.row {
+  width: 1280px;
+  text-align: center;
+}
+
+.row .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.row .gallery .g-img {
+  width: 33.3333%;
+  height: 33.3333%;
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+.row .gallery .g-img:nth-child(3n+1) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.row .gallery .g-img:nth-child(3n+2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.row .gallery .g-img:nth-child(3n) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.row .gallery .g-img img:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 /*# sourceMappingURL=style.css.map */
