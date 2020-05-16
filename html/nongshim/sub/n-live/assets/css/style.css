@@ -240,4 +240,46 @@
   border: 2px solid #c3d9ab;
   background: #fff;
 }
+
+/* 옵션 */
+.row {
+  width: 1280px;
+  height: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.row .options .option-set {
+  border-bottom: 2px solid #e8e8e8;
+  border-right: 2px solid #e8e8e8;
+  margin: 20px;
+}
+
+.row .options .option-set li {
+  display: inline-block;
+  padding: 25px 60px;
+}
+
+.row .options .option-set li a {
+  position: relative;
+  color: 222px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+}
+
+.row .options .option-set li .selected {
+  color: #000;
+}
+
+.row .options .option-set li .selected::after {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border: 1px solid #da1009;
+  background: #da1009;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=style.css.map */

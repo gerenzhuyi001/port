@@ -148,16 +148,68 @@
     <!-- //button -->
     
     <!-- list -->
-    <section id="list">
-        <div class="list-nav"></div>
+    <section id="options">
+        <div class="row">
+            <div class="options">
+                <ul class="option-set">
+                    <li><a href="#" data-filter-value="" class="options01 selected" >VIEW ALL</a></li>
+                    <li class="options-list"><a href="#" data-filter-value=".homepage" class="options02">HOMEPAGE</a></li>
+                    <li class="options-list"><a href="#" data-filter-value=".facebook" class="options03">FACEBOOK</a></li>
+                    <li class="options-list"><a href="#" data-filter-value=".instagram" class="options04">INSTAGRAM</a></li>
+                    <li class="options-list"><a href="#" data-filter-value=".youtube" class="options05"> YOUTUBE</a></li>
+                    <li class="options-list"><a href="#" data-filter-value=".blog" class="options06">BLOG</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
     <!-- //list -->
+
+
 
     <!-- script -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- //script -->
+
+    <script>
+        let options01 = $('#options>.row>.options>ul>li>.options01')
+        let options02 = $('#options>.row>.options>ul>li>.options02')
+        let options03 = $('#options>.row>.options>ul>li>.options03')
+        let options04 = $('#options>.row>.options>ul>li>.options04')
+        let options05 = $('#options>.row>.options>ul>li>.options05')
+        let options06 = $('#options>.row>.options>ul>li>.options06')
+        options01.click(function(e){
+            e.preventDefault();
+            $('#options>.row>.options>ul>li>a').removeClass('selected');
+            options01.addClass('selected');
+        });
+        options02.click(function(e){
+            e.preventDefault();
+            $('#options>.row>.options>ul>li>a').removeClass('selected');
+            options02.addClass('selected');
+        });
+        options03.click(function(e){
+            e.preventDefault();
+            $('#options>.row>.options>ul>li>a').removeClass('selected');
+            options03.addClass('selected');
+        });
+        options04.click(function(e){
+            e.preventDefault();
+            $('#options>.row>.options>ul>li>a').removeClass('selected');
+            options04.addClass('selected');
+        });
+        options05.click(function(e){
+            e.preventDefault();
+            $('#options>.row>.options>ul>li>a').removeClass('selected');
+            options05.addClass('selected');
+        });
+        options06.click(function(e){
+            e.preventDefault();
+            $('#options>.row>.options>ul>li>a').removeClass('selected');
+            options06.addClass('selected');
+        });
+    </script>
 
 </body>
 

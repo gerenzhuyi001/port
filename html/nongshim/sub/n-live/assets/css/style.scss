@@ -242,6 +242,48 @@
         
     }
 }
+// 버튼
 
+/* 옵션 */
+.row {
+    width: 1280px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    .options {
+        .option-set {
+            border-bottom: 2px solid #e8e8e8;
+            border-right: 2px solid #e8e8e8;
+            margin: 20px;
+            li {
+                display: inline-block;
+                padding: 25px 60px;
+                
+                a {
+                    position: relative;
+                    color: 222px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #666;
+                }
 
+                .selected {
+                    color: #000;
+                    
+                
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 6px; height: 6px;
+                        vertical-align:middle;
+                        border: 1px solid #da1009;
+                        background: #da1009;
+                        border-radius: 50%;
+
+                    }    
+                }
+            }
+        }
+    }
+}
 
