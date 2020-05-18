@@ -79,11 +79,11 @@
                 </h1>
                 <nav id="nav" class="nav">
                     <ul>
-                        <li><a href="#">농심소개</a></li>
-                        <li><a href="#">지속가능경영</a></li>
-                        <li><a href="#">홍보센터</a></li>
-                        <li><a href="#">투자정보</a></li>
-                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#"><span>농심소개</span></a></li>
+                        <li><a href="#"><span>지속가능경영</span></a></li>
+                        <li><a href="#"><span>홍보센터</span></a></li>
+                        <li><a href="#"><span>투자정보</span></a></li>
+                        <li><a href="#"><span>고객지원</span></a></li>
                         <li class="live"><a href="#">N.LIVE</a></li>
                     </ul>
                 </nav>
@@ -110,36 +110,40 @@
 
     <!-- banner -->
     <section id="banner">
-        <div class="swiper-container">
-            <div class="n-live">
-                <h1>N.LIVE</h1>
-            </div>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="main-left-two"></div>
-                    <span class='box'></span>
-                    <div class="text">
-                        <span class="tit">내 입맛에 찰지게 착! 찰비빔면, 찰송~ (카피추, 허영지)</h2>
-                            <span class="p"> 오늘 뭐 먹지?? 아직도 헷갈리나요~ 짜~짜라짜짜 비벼! 찰찰찰~ 찰비빔면~ 상큼~한 찰비빔면 내 입맛에 찰지게 착!</p>
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=ziSGJdXLmi4" class="two"></a>
-                    <div class="main-right-two"></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="main-left-one"></div>
-                    <span class='box'></span>
-                    <div class="text">
-                        <span class="tit">회원전용 포인트샵 앵그리짜파구리 큰사발</h2>
-                    </div>
-                    <a href="http://www.nongshim.com/promotion/event/point_market" class="one"></a>
-                    <div class="main-right-one"></div>
-                </div>
-
-            </div>
-            <div class="swiper-pagination"></div>
-
-
+        <div class="n-live">
+            <h1>N.LIVE</h1>
         </div>
+
+        <div class="nlive">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="assets/img/banner01.jpg" alt="찰비빔면">
+                        </figure>
+                        <div class="info">
+                            <h3>내 입맛에 찰지게 착! 찰비빔면, 찰송~(카피추,허영지)</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="assets/img/banner02.jpg" alt="앵그리 짜파구리">
+                        </figure>
+                        <div class="info">
+                            <h3>회원전용 포인트샵 앵그리짜파구리 큰 사발</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide-duplicate-prev">
+                        <figure>
+                            <img src="assets/img/banner01.jpg" alt="찰비빔면">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
     </section>
     <!-- //banner -->
 
@@ -498,12 +502,15 @@
 
 
         <!-- script -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/swiper.min.js"></script>
-        <script src="assets/js/custom.js"></script>
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/swiper.min.js"></script>
+        <script src="../../assets/js/custom.js"></script>
         <!-- //script -->
 
         <script>
+            // 헤더
+            let header
+
             // 슬라이드 헤더
             let wHeight = $(window).height(); //1000 브라우저
             let dHeight = $(document).height(); //6000 컨텐츠
@@ -539,6 +546,17 @@
             lastScrollTop = wScroll
             }
             // 슬라이드 헤더 끝
+            // 스와이퍼배너
+            var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: '3',
+            spaceBetween: 2,
+            centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            });
 
             // 옵션 클릭
             let options01 = $('#options>.row>.options>ul>li>.options01')
@@ -547,47 +565,42 @@
             let options04 = $('#options>.row>.options>ul>li>.options04')
             let options05 = $('#options>.row>.options>ul>li>.options05')
             let options06 = $('#options>.row>.options>ul>li>.options06')
+            
             options01.click(function (e) {
                 e.preventDefault();
                 $('#options>.row>.options>ul>li>a').removeClass('selected');
                 options01.addClass('selected');
                 $('#options>.row>.options>ul>li').removeClass('click');
-                $('#options>.row>.options>ul>.click01').addClass('click');
             });
             options02.click(function (e) {
                 e.preventDefault();
                 $('#options>.row>.options>ul>li>a').removeClass('selected');
                 options02.addClass('selected');
                 $('#options>.row>.options>ul>li').removeClass('click');
-                $('#options>.row>.options>ul>.click02').addClass('click');
             });
             options03.click(function (e) {
                 e.preventDefault();
                 $('#options>.row>.options>ul>li>a').removeClass('selected');
                 options03.addClass('selected');
                 $('#options>.row>.options>ul>li').removeClass('click');
-                $('#options>.row>.options>ul>.click03').addClass('click');
             });
             options04.click(function (e) {
                 e.preventDefault();
                 $('#options>.row>.options>ul>li>a').removeClass('selected');
                 options04.addClass('selected');
                 $('#options>.row>.options>ul>li').removeClass('click');
-                $('#options>.row>.options>ul>.click04').addClass('click');
             });
             options05.click(function (e) {
                 e.preventDefault();
                 $('#options>.row>.options>ul>li>a').removeClass('selected');
                 options05.addClass('selected');
                 $('#options>.row>.options>ul>li').removeClass('click');
-                $('#options>.row>.options>ul>.click05').addClass('click');
             });
             options06.click(function (e) {
                 e.preventDefault();
                 $('#options>.row>.options>ul>li>a').removeClass('selected');
                 options06.addClass('selected');
                 $('#options>.row>.options>ul>li').removeClass('click');
-                $('#options>.row>.options>ul>.click06').addClass('click');
             });
             // 옵션 클릭 끝
 

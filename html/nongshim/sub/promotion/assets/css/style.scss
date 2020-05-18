@@ -132,19 +132,22 @@
                 width: 17px;
             }
         }
+
         ul {
             position: absolute;
             font-size: 14px;
             left: 50px;
             padding-top: 10px;
             color: #666666;
+
             li {
                 display: inline;
 
                 &:first-child {
                     position: relative;
                     margin-right: 30px;
-                    }
+                }
+
                 &:first-child::after {
                     content: '/';
                     position: absolute;
@@ -152,14 +155,17 @@
                 }
             }
         }
+
         a.down {
             position: absolute;
             left: 220px;
             padding-top: 13px;
+
             img {
                 width: 10px;
             }
         }
+
         a.more {
             position: absolute;
             right: 0;
@@ -182,31 +188,36 @@
 // container2
 
 /* 배너 */
+.promotion {
+    text-align: center;
+
+    h1 {
+        font-size: 64px;
+        font-weight: 500;
+    }
+
+    h2 {
+        margin: 70px 0 40px 0;
+        font-size: 32px;
+        font-weight: 600;
+
+        span {
+            display: inline-block;
+            border: 1px solid #96c11f;
+            border-radius: 50%;
+            background: #96c11f;
+            width: 20px;
+            height: 20px;
+
+        }
+    }
+}
+
 .swiper-container {
     margin-top: 265px;
     margin: 0 auto;
     text-align: center;
-    .promotion {
-        text-align: center;
-        h1 {
-            font-size: 64px;
-            font-weight: 500;
-        }
-        h2 {
-            margin: 70px 0 40px 0;
-            font-size: 32px;
-            font-weight: 600;
-            span {
-                display: inline-block;
-                border: 1px solid #96c11f;
-                border-radius: 50%;
-                background: #96c11f;
-                width: 20px;
-                height: 20px;
 
-            }
-        }
-    }
     .swiper-wrapper {
         .swiper-slide {
             img {
@@ -215,11 +226,13 @@
             }
         }
     }
+
     .pannel {
         display: inline-block;
         width: 460px;
         height: 285px;
     }
+
     .swiper-pagination {
         .icon-pause {
             position: absolute;

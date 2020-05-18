@@ -114,11 +114,11 @@
 
     <!-- banner -->
     <div id="banner">
+        <div class="promotion">
+            <h1>홍보센터</h1>
+            <h2 class="tit"><span class="b-dot"></span><br>농시미 이벤트</h2>
+        </div>
         <div class="swiper-container">
-            <div class="promotion">
-                <h1>홍보센터</h1>
-                <h2 class="tit"><span class="b-dot"></span><br>농시미 이벤트</h2>
-            </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="http://www.nongshim.com/promotion/event/point_market"><img src="assets/img/banner1.jpg"
@@ -171,6 +171,12 @@
         //         <a href="#" class="icon-play">
         //             <img src="assets/img/icon-play.svg" alt="시작">
         //         </a>
+
+        var mySwiper3 = new Swiper ('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true
+        })
+
         $(document).ready(function () {
             $(".swiper-pagination").append(
                 "<a href='#' class='icon-pause'><img src='assets/img/icon-pause.svg' alt='정지'></a>");

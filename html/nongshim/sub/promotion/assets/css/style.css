@@ -185,34 +185,34 @@
 }
 
 /* 배너 */
-.swiper-container {
-  margin-top: 265px;
-  margin: 0 auto;
+.promotion {
   text-align: center;
 }
 
-.swiper-container .promotion {
-  text-align: center;
-}
-
-.swiper-container .promotion h1 {
+.promotion h1 {
   font-size: 64px;
   font-weight: 500;
 }
 
-.swiper-container .promotion h2 {
+.promotion h2 {
   margin: 70px 0 40px 0;
   font-size: 32px;
   font-weight: 600;
 }
 
-.swiper-container .promotion h2 span {
+.promotion h2 span {
   display: inline-block;
   border: 1px solid #96c11f;
   border-radius: 50%;
   background: #96c11f;
   width: 20px;
   height: 20px;
+}
+
+.swiper-container {
+  margin-top: 265px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .swiper-container .swiper-wrapper .swiper-slide img {
