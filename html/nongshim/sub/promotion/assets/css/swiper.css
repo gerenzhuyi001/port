@@ -142,8 +142,8 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
+  width: 15px;
+  height:15px;
   margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
@@ -166,7 +166,7 @@
   text-transform: none;
   font-variant: initial;
   line-height: 1;
-  color:#fff;
+  color:#000;
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
@@ -204,7 +204,7 @@
 }
 .swiper-pagination {
   position: absolute;
-  text-align: left;
+  text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
@@ -252,7 +252,7 @@
   height: 6px;
   display: inline-block;
   border-radius: 100%;
-  background: #fff;
+  background: #000;
   margin: 13px !important;
 }
 button.swiper-pagination-bullet {
@@ -271,7 +271,7 @@ button.swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   opacity: 1;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   background: transparent;
   margin: 0 10px 9px 10px !important;
 }

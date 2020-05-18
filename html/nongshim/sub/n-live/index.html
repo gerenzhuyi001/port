@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-
+<!-- 헤더 탭메뉴 링크, 밑줄, 헤더 사라짐, 갤러리 분류, 푸터 아이콘 링크  -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,7 @@
 </head>
 
 <body>
+    <!-- header -->
     <header id="header">
         <div class="container">
             <div class="header1">
@@ -107,31 +108,453 @@
     </header>
     <!-- //header -->
 
+    <!-- banner -->
     <section id="banner">
         <div class="swiper-container">
-            <h3>N.LIVE</h3>
+            <div class="n-live">
+                <h1>N.LIVE</h1>
+            </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <h2>[슬기로운 백세가족] 백두산 청정 원시림의 좋은 물 백산수</h2>
-                    <a href="https://www.youtube.com/watch?v=8_-eh6USJF4"><img src="assets/img/banner2.jpg" alt=""></a>
+                    <div class="main-left-two"></div>
+                    <span class='box'></span>
+                    <div class="text">
+                        <span class="tit">내 입맛에 찰지게 착! 찰비빔면, 찰송~ (카피추, 허영지)</h2>
+                            <span class="p"> 오늘 뭐 먹지?? 아직도 헷갈리나요~ 짜~짜라짜짜 비벼! 찰찰찰~ 찰비빔면~ 상큼~한 찰비빔면 내 입맛에 찰지게 착!</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=ziSGJdXLmi4" class="two"></a>
+                    <div class="main-right-two"></div>
                 </div>
                 <div class="swiper-slide">
-                    <h2>회원전용 포인트샵 앵그리짜파구리 큰사발</h2>
-                    <a href="http://www.nongshim.com/promotion/event/point_market"><img src="assets/img/banner1.jpg" alt=""></a>
+                    <div class="main-left-one"></div>
+                    <span class='box'></span>
+                    <div class="text">
+                        <span class="tit">회원전용 포인트샵 앵그리짜파구리 큰사발</h2>
+                    </div>
+                    <a href="http://www.nongshim.com/promotion/event/point_market" class="one"></a>
+                    <div class="main-right-one"></div>
                 </div>
+
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+
+
         </div>
     </section>
+    <!-- //banner -->
 
+    <!-- button -->
+    <section id="button">
+        <div class="button-cont">
+            <a href="#" class="btn active">짜파구리</a>
+            <a href="#" class="btn">앵그리RtA</a>
+            <a href="#" class="btn active">신라면건면</a>
+            <a href="#" class="btn">짜왕건면</a>
+            <a href="#" class="btn active">짜파게티</a>
+            <a href="#" class="btn">너구리</a>
+            <a href="#" class="btn">농시미이벤트</a>
+            <a href="#" class="btn active">누들푸드레시피</a>
+            <a href="#" class="btn">푸들칼럼</a>
+            <a href="#" class="btn active">이럴때이런라면</a>
+            <a href="#" class="btn">N:zin</a>
+        </div>
+    </section>
+    <!-- //button -->
+
+    <!-- list -->
+    <section id="options">
+        <div class="row">
+            <div class="options">
+                <ul class="option-set">
+                    <li class="options-list click01"><a href="#" data-filter-value=""
+                            class="options01 selected "><span></span> VIEW ALL</a></li>
+                    <li class="options-list click02"><a href="#" data-filter-value=".homepage"
+                            class="options02"><span></span>HOMEPAGE</a></li>
+                    <li class="options-list click03"><a href="#" data-filter-value=".facebook"
+                            class="options03"><span></span>FACEBOOK</a></li>
+                    <li class="options-list click04"><a href="#" data-filter-value=".instagram"
+                            class="options04"><span></span>INSTAGRAM</a></li>
+                    <li class="options-list click05"><a href="#" data-filter-value=".youtube"
+                            class="options05"><span></span> YOUTUBE</a></li>
+                    <li class="options-list click06"><a href="#" data-filter-value=".blog"
+                            class="options06"><span></span>BLOG</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //list -->
+
+    <!-- 갤러리 -->
+    <sectio id="gallery">
+        <div class="row">
+            <div class="gallery">
+                <div class="g-img homepage">
+                    <a href="http://www.nongshim.com/promotion/event/point_market">
+                        <span class="cover"></span>
+                        <img src="assets/img/homepage01.jpg" alt="homepage img">
+                        <img src="assets/img/homepage.svg" alt="homepage icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>농시미 이벤트</strong>
+                            <p>회원전용 포인트샵<br>앵그리짜파구리 큰사발</p>
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.05.14</span>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="g-img homepage">
+                    <a href="http://www.nongshim.com/promotion/ramyun_pedia/view?groupCode=004&groupId=30">
+                        <img src="assets/img/homepage.svg" alt="homepage icon" class="g-icon">
+                        <span class="cover"></span>
+                        <img src="assets/img/homepage02.jpg" alt="homepage img">
+                        <div class="g-text01">
+                            <strong>라면잡학</strong>
+                            <p>추억의 라면, 알아야 할 것이 있나요? <br>추운 겨울날 몸을 녹여준 따끈한 라면 혹은 출출할 때 먹었던 나만의 레시피 라면 등 누구나 하나쯤은 추억이 깃든
+                            </p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.05.13</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img homepage">
+                    <a href="http://www.nongshim.com/promotion/event/view/2020/04_bongpoint/bongpoint_event">
+                        <img src="assets/img/homepage.svg" alt="homepage icon" class="g-icon">
+                        <span class="cover"></span>
+                        <img src="assets/img/homepage03.jpg" alt="homepage img">
+                        <div class="g-text01">
+                            <strong>농시미이벤트</strong>
+                            <p>회원전용 '봉포인트'게임 <br>이벤트 신제품 칼빔면 퍼즐</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.21</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img facebook">
+                    <a href="https://www.facebook.com/nongshim/photos/a.464566033622981/2930330650379828/?type=3">
+                        <img src="assets/img/facebook.svg" alt="facebook icon" class="g-icon">
+                        <span class="cover"></span>
+                        <img src="assets/img/facebook01.jpg" alt="facebook img">
+                        <div class="g-text01">
+                            <strong>페이스북</strong>
+                            <p>『#스승의날』"난 언제 처음 라면을 끓였지?""난 누구한테 라면 끓이는 걸 배웠지?""내가 처음 먹은</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.05.15</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img facebook">
+                    <a href="https://www.facebook.com/nongshim/videos/165571361562241/">
+                        <span class="cover"></span>
+                        <img src="assets/img/facebook02.jpg" alt="facebook img">
+                        <img src="assets/img/facebook.svg" alt="facebook icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>페이스북</strong>
+                            <p>『농심X탈잉』 이 준비한 둥지냉면 동양화 클래스 비단 위에 그리는 동양화도 즐기고 둥지냉면도 즐겨요!</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.05.11</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img facebook">
+                    <a href="https://www.facebook.com/nongshim/videos/514088352618696/">
+                        <span class="cover"></span>
+                        <img src="assets/img/facebook03.jpg" alt="facebook img">
+                        <img src="assets/img/facebook.svg" alt="facebook icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>페이스북</strong>
+                            <p>『#앵그리짜파구리큰사발』<br>짜파게티와 앵그리RtA '퓨-전'! 엥그리 짜파구리 큰사발 출시!<br>대한민국 대표 짜장라면</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.28</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img instagram">
+                    <a href="https://www.instagram.com/p/CAHjFLkDhqG/">
+                        <span class="cover"></span>
+                        <img src="assets/img/instagram01.jpg" alt="instagram img">
+                        <img src="assets/img/instagram.svg" alt="instagram icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>인스타그램</strong>
+                            <p>『#쿡탐 #새우깡국물라볶이』손이 가요~ 손이 가~♬♪ 매콤달콤 새우깡 국물라볶이 먹고! 후식으로 바삭바사삭</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.05.13</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img instagram">
+                    <a href="https://www.instagram.com/p/B_lK2cKnDRu/">
+                        <span class="cover"></span>
+                        <img src="assets/img/instagram02.jpg" alt="instagram img">
+                        <img src="assets/img/instagram.svg" alt="instagram icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>인스타그램</strong>
+                            <p>『#너구리』 오늘 아침에는 얼큰한 #너구리 한 마리 몰고 갑니다. -먹다 보니 #다시마 가 남았는데 발우공양하듯 다</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.30</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img instagram">
+                    <a href="https://www.instagram.com/p/B_MH-jBBbO9/">
+                        <span class="cover"></span>
+                        <img src="assets/img/instagram03.jpg" alt="instagram img">
+                        <img src="assets/img/instagram.svg" alt="instagram icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>인스타그램</strong>
+                            <p>『#짜파구리 출시 실화?』 드.디.어 짜파구리가 글로벌 출시되었습니다.-오동통한 너구리의 면발과 매콤한</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.20</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="g-img youtube">
+                    <a href="https://www.youtube.com/watch?v=8_-eh6USJF4">
+                        <span class="cover"></span>
+                        <img src="assets/img/youtube01.jpg" alt="youtube img">
+                        <img src="assets/img/youtube.svg" alt="youtube icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>유튜브</strong>
+                            <p>[슬기로운 백세가족] 백두산 청정 원시림의 좋은 물 백산수</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.05.15</span>
+                        </div>
+
+                    </a>
+                </div>
+
+
+                <div class="g-img youtube">
+                    <a href="https://www.youtube.com/watch?v=LJRi4h1oA3A">
+                        <span class="cover"></span>
+                        <img src="assets/img/youtube02.jpg" alt="youtube img">
+                        <img src="assets/img/youtube.svg" alt="youtube icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>유튜브</strong>
+                            <p>막힌 가슴 뚫어주는 매콤한 양념장, '둥지냉면 비빔냉면' (음문석, 김민아 편)</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.08</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img youtube">
+                    <a href="https://www.youtube.com/watch?v=HRZ5c_GXK2o">
+                        <span class="cover"></span>
+                        <img src="assets/img/youtube03.jpg" alt="youtube img">
+                        <img src="assets/img/youtube.svg" alt="youtube icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>유튜브</strong>
+                            <p>[신제품] 비빔면의 상식을 칼로 베다 '농심 칼빔면'</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.13</span>
+                        </div>
+
+                    </a>
+                </div>
+
+
+                <div class="g-img blog">
+                    <a href="http://blog.naver.com/nongshimblog/221924488488">
+                        <span class="cover"></span>
+                        <img src="assets/img/blog01.jpg" alt="blog img">
+                        <img src="assets/img/blog.svg" alt="blog icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>블로그</strong>
+                            <p>[보도자료]농심, 백산수 '이지오픈'라벨 적용 "쉽게 떼고 분리수거하세요~"</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.23</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img blog">
+                    <a href="http://blog.naver.com/nongshimblog/221907444288">
+                        <span class="cover"></span>
+                        <img src="assets/img/blog02.jpg" alt="blog img">
+                        <img src="assets/img/blog.svg" alt="blog icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>블로그</strong>
+                            <p>[보도자료]농심, '포테토칩 김치사발면맛' 출시 농심이 원조 감자칩<br>'포테토칩'과 '김치사발면'을 조합한 '포테토칩'</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.04.14</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="g-img blog">
+                    <a href="http://blog.naver.com/nongshimblog/221846395911">
+                        <span class="cover"></span>
+                        <img src="assets/img/blog03.jpg" alt="blog img">
+                        <img src="assets/img/blog.svg" alt="blog icon" class="g-icon">
+                        <div class="g-text01">
+                            <strong>블로그</strong>
+                            <p>[보도자료] 농심, 쫄병스낵 달고나맛 출시 <br> 농심, 쫄병스낵 달고나맛 출시 "별사탕이 콕콕, 아주 달달하고냐! "농심이 쪽병스낵 달고나맛을 새롭게
+                                출시했다.</p>
+
+                        </div>
+                        <div class="g-text02">
+                            <span>2020.03.10</span>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+            <div class="g-btn-more">
+                <div class="btn-more">
+                     <img src="assets/img/plus.svg" alt="more" class="more">
+                </div>
+                <div class="btn-text">
+                    <span class="more list">리스트 더 보기</span><br>
+                    <span class="more how">(12/328)</span>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- //갤러리 -->
+
+        <!-- footer -->
+<footer id="footer">
     
-    <!-- script -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- //script -->
+    <div class="container2">
+        <div class="footer2">
+            <a href="#">상담접수</a>
+            <a href="#">FAQ</a>
+            <a href="#">오시는길</a>
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+        </div>
+        <div class="footer3">
+            <a href="#">특약점포탈</a>
+            <a href="#">전자결제</a>
+            <a href="#">증명서조희</a>
+            <a href="#">이메일주소무단수집거부</a>
+        </div>
+        <ul>
+            <li>(주)농심</li>
+            <li>서울특별시 동작구 여의대방로 112 (신대방동)</li>
+            <li>사업자등록번호 118-81-03914</li>
+            <li>대표이사 박준</li><br>
+            <li>대표전화 02.820.7114</li>
+            <li>고객센터 080.023.5181</li>
+        </ul>
+        <div class="box">
+            <a href="#" class="footer-btn"><img src="assets/img/arrow_drop_down-black-18dp.svg" alt="">  패밀리 사이트</a>
+            <div class="footer4">
+                <a href="#"><img src="assets/img/facebook.svg" alt="페이스북"></a>
+                <a href="#"><img src="assets/img/instagram.svg" alt="인스타그램"></a>
+                <a href="#"><img src="assets/img/youtube.svg" alt="유튜브"></a>
+                <a href="#"><img src="assets/img/blog.svg" alt="네이버블로그"></a>
+            </div>
+        </div>
+        <address>
+            &copy; NONGSHIM CO.,LTD. ALL RIGHTS RESERVED.
+        </address>
+    </div>
+</footer>
+
+
+        <!-- script -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/swiper.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- //script -->
+
+        <script>
+            // 옵션 클릭
+            let options01 = $('#options>.row>.options>ul>li>.options01')
+            let options02 = $('#options>.row>.options>ul>li>.options02')
+            let options03 = $('#options>.row>.options>ul>li>.options03')
+            let options04 = $('#options>.row>.options>ul>li>.options04')
+            let options05 = $('#options>.row>.options>ul>li>.options05')
+            let options06 = $('#options>.row>.options>ul>li>.options06')
+            options01.click(function (e) {
+                e.preventDefault();
+                $('#options>.row>.options>ul>li>a').removeClass('selected');
+                options01.addClass('selected');
+                $('#options>.row>.options>ul>li').removeClass('click');
+                $('#options>.row>.options>ul>.click01').addClass('click');
+            });
+            options02.click(function (e) {
+                e.preventDefault();
+                $('#options>.row>.options>ul>li>a').removeClass('selected');
+                options02.addClass('selected');
+                $('#options>.row>.options>ul>li').removeClass('click');
+                $('#options>.row>.options>ul>.click02').addClass('click');
+            });
+            options03.click(function (e) {
+                e.preventDefault();
+                $('#options>.row>.options>ul>li>a').removeClass('selected');
+                options03.addClass('selected');
+                $('#options>.row>.options>ul>li').removeClass('click');
+                $('#options>.row>.options>ul>.click03').addClass('click');
+            });
+            options04.click(function (e) {
+                e.preventDefault();
+                $('#options>.row>.options>ul>li>a').removeClass('selected');
+                options04.addClass('selected');
+                $('#options>.row>.options>ul>li').removeClass('click');
+                $('#options>.row>.options>ul>.click04').addClass('click');
+            });
+            options05.click(function (e) {
+                e.preventDefault();
+                $('#options>.row>.options>ul>li>a').removeClass('selected');
+                options05.addClass('selected');
+                $('#options>.row>.options>ul>li').removeClass('click');
+                $('#options>.row>.options>ul>.click05').addClass('click');
+            });
+            options06.click(function (e) {
+                e.preventDefault();
+                $('#options>.row>.options>ul>li>a').removeClass('selected');
+                options06.addClass('selected');
+                $('#options>.row>.options>ul>li').removeClass('click');
+                $('#options>.row>.options>ul>.click06').addClass('click');
+            });
+            // 옵션 클릭 끝
+        </script>
 
 </body>
 
