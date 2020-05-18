@@ -18,12 +18,12 @@
     background:url(../img/header_bg.jpg) repeat-x center top;
 }
 #contents {}
-#footer {height: 200px; background-color: #333;}
+#footer {border-top: 1PX solid #eee;}
 
 
 /* 컨텐츠 레이아웃 */
 #cont-nav {background-color: #f6fdff;}
-#cont-tit {background-color: #eaf7fd;}
+#cont-tit {background-color: #eaf7fd; }
 #cont-ban {background-color: #dceff7;}
 #cont-cont {background-color: #f6fdff;}
 
@@ -31,14 +31,13 @@
 .container {width: 990px; height: inherit; margin: 0 auto; /* background-color: rgba(255,255,255,0.3);*/}
 
 /* 헤더 */
-.header { }
 .header .header-menu {text-align: right;}
 .header .header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block; text-transform: capitalize;}
 .header .header-menu a:hover {color: #666;}
 
 .header .header-tit {text-align: center;}
-.header .header-tit h1 { font-size: 28px; padding: 5px 20px 6px 20px; background-color: #4aa8d4; color: #fff; text-transform: uppercase; display: inline-block; margin-top: 40px;}
-.header .header-tit a {font-size: 18px; color: #fff; background-color: #2698cd; padding: 5px 20px 6px 20px; display: inline-block; margin-top: -5px;}
+.header .header-tit h1 {color: #fff; padding: 5px 20px 6px 20px; display: inline-block; text-transform: uppercase; margin-top: 40px; font-size: 28px; background-color: #4aa8d4;}
+.header .header-tit a {color: #fff; padding: 5px 20px 6px 20px; display: inline-block; margin-top: -5px; font-size: 18px; background-color: #2698cd; }
 
 .header .header-icon {text-align: center; margin-top: 30px;}
 .header .header-icon a {display: inline-block; width: 60px; height: 60px; background-image: url(../img/icon.png);}
@@ -54,22 +53,21 @@
 /* 전체 메뉴 */
 .nav {overflow: hidden; padding: 30px 0;}
 .nav div {float: left; width: 40%;}
-.nav div:last-child { width: 20%;}
+.nav div:last-child {width: 20%;}
 .nav div ul {overflow: hidden;}
-.nav div ul li { width: 50%; float: left;}
-.nav div:last-child ul li { width: 100%; }
+.nav div ul li {float: left; width: 50%;}
+.nav div:last-child ul li {width: 100%;}
 .nav div h3 {font-size: 18px; color: #25a2d0; margin-bottom: 4px;}
 .nav div a:hover {text-decoration: underline;}
 
 /* 타이틀 */
 .tit {position: relative;}
 .tit h2 {text-align: center; font-size: 40px; color: #2c94c4; padding: 5px 0; font-family: 'Nanum Brush Script', cursive;} 
-.tit .btn {position: absolute; top: 0; right: 0; } 
-.tit .btn {position: absolute; top: 0; right: 0; top: 5px; display: inline-block; width: 60px; height: 60px; background:  url(../img/icon.png) 0 -600px;} 
+.tit .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background:  url(../img/icon.png) 0 -600px;} 
 .tit .btn:hover {background-position: -60px -600px;}
 
 /* 배너 */
-.ban {position: relative; padding: 20px 0;}
+/* .ban {position: relative; padding: 20px 0;}
 .ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px; height: 43px; background: url(../img/icon.png) -150px 0;}
 .ban a.next {position: absolute; right: -80px; top: 60px; width: 43px; height: 43px; background: url(../img/icon.png) -150px -43px;}
 .ban a.prev:hover {background-position: -193px 0;}
@@ -78,12 +76,26 @@
 .ban ul  {overflow: hidden; }
 .ban ul li {float: left; width: 330px;}
 .ban ul li:nth-child(2) {text-align: center;} /*ie9부터 적용 */
-.ban ul li:last-child {text-align: right;} /*ie9부터 적용 */
-.ban ul li.ban_img1 { }
+/* .ban ul li:last-child {text-align: right;} /*ie9부터 적용 */
+/* .ban ul li.ban_img1 { }
 .ban ul li.ban_img2 {text-align: center; }
 .ban ul li.ban_img3 {text-align: right; }
 .ban ul li img {border: 4px solid #dcdcdc;}
-.ban ul li img:hover {border-color:  #98bcdc;}
+.ban ul li img:hover {border-color:  #98bcdc;} */
+
+/* 슬릭 배너 */
+.ban {position: relative; padding: 20px 0;}
+.ban .slick-prev {position: absolute; left: -80px; top: 70px; width: 43px; height: 43px; background: url(../img/icon.png) -150px 0; text-indent: -9999px; cursor: pointer;}   
+.ban .slick-next {position: absolute;  right: -80px; top: 70px; width: 43px; height: 43px; background: url(../img/icon.png) -150px -43px; text-indent: -9999px; cursor: pointer;}
+.ban .slick-prev:hover {background-position: -193px 0;}
+.ban .slick-next:hover {background-position: -193px -43px;}
+.ban img {border: 4px solid #dcdcdc;}
+.ban img:hover {border-color: #98bcdc;} 
+.ban .slick-slide {margin: 10px;}
+.ban .slick-dots {position: absolute; display: block; bottom: 5px; width: 100%; text-align: center;}
+.ban .slick-dots li {display: inline-block; margin: 5px;}
+.ban .slick-dots li button {font-size: 0; line-height: 0; display: block; width: 15px; height: 15px; background: #5dbfeb; border-radius: 50%; cursor: pointer;}
+.ban .slick-dots li.slick-active button {background: #2b91c8;}
 
 /* 컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px; }
@@ -114,25 +126,24 @@
 
 /* 게시판 */
 .notice {position: relative;}
-.notice h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold;}
+.notice h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
 .notice ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 8px; background: url(../img/dot.gif) no-repeat 0 8px;}
-.notice ul li a {font-size: 12px; }
+.notice ul li a {font-size: 12px;}
 .notice a.more {position: absolute; right: 0; top: 0; width: 17px; height: 17px; background: url(../img/icon.png) -150px -90px; position: absolute;}
 .notice a.more:hover {background-position: -167px -90px;}
 
 /* 게시판2 */
 .notice2 {position: relative;}
 .notice2 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; margin-top: 15px;}
-.notice2 ul { }
 .notice2 li {overflow: hidden; padding-left: 8px; background: url(../img/dot.gif) no-repeat 0 8px;}
-.notice2 li a {font-size: 12px; float: left; width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.notice2 li a {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; float: left; width: 70%; }
 .notice2 li span {font-size: 12px; float: left; width: 30%; text-align: right;}
-.notice2 .more {position: absolute; right: 0; top: 0; width: 17px; height: 17px; background: url(../img/icon.png) -150px -90px; position: absolute; }
+.notice2 .more {position: absolute; right: 0; top: 0; width: 17px; height: 17px; background: url(../img/icon.png) -150px -90px; position: absolute;}
 .notice2 a.more:hover {background-position: -167px -90px;}
 
 /* 게시판3 */
 .notice3 {position: relative; }
-.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; margin-top: 15px;}
+.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; marg`in-top: 15px;}
 .notice3 li {position: relative; padding: 8px 0 14px 60px; }
 .notice3 li a img {width: 50px; border: 1px solid #0093bd; position: absolute; left: 0; top: 0; }
 .notice3 li a strong {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
@@ -166,9 +177,11 @@
 .col3 {position: relative;}
 .ad {position: absolute; bottom: 5px;}
 .ad h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; margin-top: 15px;}
-.ad ul {overflow: hidden; }
-.ad li {float: left; margin-right: 5px; width: 93px;}
-.ad li:last-child {margin-right: 0; }
+.ad .lightbox  {
+    }
+.ad .lightbox ul {overflow: hidden; }
+.ad .lightbox li {float: left; margin-right: 5px; width: 93px;}
+.ad .lightbox li:last-child {margin-right: 0;}
 .ad img {width: 100%;}
 
 /* 공지사항 */
@@ -188,14 +201,53 @@
 .notice5 {margin-top: 15px; border: 1px solid #ccc; position: relative;}
 .notice5 h4 {border-bottom: 1px solid #ccc; font-size: 14px; padding: 8px 10px; font-weight: bold; color: #0093bd;}
 .notice5 h4 em {color: #f00;}
-.notice5 ul {margin: 10px 0; }
+.notice5 ul {margin: 10px 0;}
 .notice5 li {overflow: hidden; padding-left: 18px; background: url(../img/dot.gif) no-repeat 8px;}
 .notice5 li a {float: left; width: 70%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 .notice5 li span {float: left; width: 30%; }
 .notice5 .more {position: absolute; right: 8px; top: 8px; }
 
+/* 갤러리 */
+.gallery {position: relative; border: 1px solid #ccc; height: 254px; overflow: hidden;}
+.gallery h4 {border-bottom: 1px solid #ccc; font-size: 14px; color: #0093bd; font-weight: bold; padding: 8px 10px;}
+.gallery-btn {position: absolute; right: 5px; top: 7px; }
+.gallery-btn ul {overflow: hidden; }
+.gallery-btn li {float: left; }
+.gallery-btn li a {display: block; width: 23px; height: 23px; background-image: url(../img/icon.png);  }
+.gallery-btn li.gb-icon1 a {background-position: -150px -120px;}
+.gallery-btn li.gb-icon2 a {background-position: -150px -143px;}
+.gallery-btn li.gb-icon3 a {background-position: -150px -166px;}
+.gallery-btn li.gb-icon4 a {background-position: -150px -189px;}
+.gallery-btn li.gb-icon1 a:hover {background-position: -173px -120px;}
+.gallery-btn li.gb-icon2 a:hover {background-position: -173px -143px;}
+.gallery-btn li.gb-icon3 a:hover {background-position: -173px -166px;}
+.gallery-btn li.gb-icon4 a:hover {background-position: -173px -189px;}
+.gallery-img img {width: 100%;}
+
+/* 로그인 */
+#login-wrap {background-color: #f2f4f5; padding: 15px; }
+.login-header {overflow: hidden; font-size: 12px; height: 24px;}
+.login-header .lh-check {float: left; padding-right: 15px; }
+.login-header .lh-check input-check{vertical-align: -2px;}
+.login-header .lh-ip {float: left; }
+.login-header .lh-ip stong {color: #0093bd;}
+
+.login-content {position: relative; }
+.login-content .lc-text .input-text { width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 2px; background: #fff; }
+.login-content .lc-text .ic-btn {position: absolute; right: 0;top: 0;width: 62px; height: 46px; background: #fff; border: 1px solid #bebebe; }
+
+.login-footer {margin-top: 5px; }
+.login-footer li {position: relative; display: inline; padding-right: 5px;}
+.login-footer li a {font-size: 12px;}
 
 
+
+/* footer */
+.footer {text-align: center; padding: 25px 0; }
+.footer ul {margin-bottom: 20px; }
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px; }
+.footer li::before {content: ''; width: 1px; height: 12px; background-color: #ccc; position: absolute; left: 0; top: 2px;}
+.footer li:first-child:before {width: 0; height: 0;}
 
 
 

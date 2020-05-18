@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout25</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap  {background: #e3f2fd; }
+        .container {width: 1200px; margin: 0 auto; }
+        #header {width: 100%; height: 100px; background: #badefb; }
+        #cont1 {width: 100%; height: 300px; background: #8ecbf9;}
+        #cont2 {width: 100%; overflow: hidden;}
+        #cont2 .cont2-side {width: 30%; height: 400px; background: #61b6f6; float: left;}
+        #cont2 .cont2-box1 {width: 70%; height: 200px; background: #3da7f5; float: left;}
+        #cont2 .cont2-box2 {width: 70%; height: 200px; background: #1799f3; float: left;}
+        #cont3 {width: 100%; overflow: hidden;}
+        #cont3 .cont3-box1 {width: 33.3333%; height: 300px; float: left; background: #168be5;  }
+        #cont3 .cont3-box2 {width: 33.3333%; height: 300px; float: left; background: #127ad2;  }
+        #cont3 .cont3-box3 {width: 33.3333%; height: 300px; float: left; background: #0f69c0;  }
+        #cont4 {overflow: hidden; width: 90%; padding: 5%; background: #3da7f5;}
+        #cont4 >article{width: 23%; height: 250px; margin: 1%; float: left; border-radius: 5px; background: #127ad2; }
+        #footer {width: 100%; height: 100px; background: #61b6f6; }
+
+        @media (max-width: 1220px){
+            .container{width: 100%;}
+            #cont3 .cont3-box1 {width: 50%; } 
+            #cont3 .cont3-box2 {width: 50%; }
+            #cont3 .cont3-box3 {display: none;}
+            #cont4 >article {width: 31%;}
+            #cont4 >article:last-child {display: none;}
+        }
+        @media (max-width: 768px){
+            #cont3 .cont3-box1 {width: 100%; height: 200px; } 
+            #cont3 .cont3-box2 {width: 100%; height: 200px; }
+        }
+        @media (max-width: 480px){
+            #cont2 .cont2-side {width: 100%; height: 200px; }
+            #cont2 .cont2-box1 {width: 100%; height: 200px; }
+            #cont2 .cont2-box2 {width: 100%; height: 200px; }
+            #cont4 >article {width: 96%;}
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header"></header>
+            <section id="cont1"></section>
+            <section id="cont2">
+                <aside class="cont2-side"></aside>
+                <article class="cont2-box1"></article>
+                <article class="cont2-box2"></article>
+            </section>
+            <section id="cont3">
+                <section class="cont3-box1"></section>
+                <section class="cont3-box2"></section>
+                <section class="cont3-box3"></section>
+            </section>
+                <section id="cont4">
+                    <article class="cont4-box1"></article>
+                    <article class="cont4-box2"></article>
+                    <article class="cont4-box3"></article>
+                    <article class="cont4-box4"></article>
+            </section>
+            <footer id="footer"></footer>
+        </div>
+    </div>
+</body>
+<!-- 배고프다 -->

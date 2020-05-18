@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <title>layout25</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap {background: #e3f2fd;}
+        .container {width: 1200px; margin: 0 auto; }
+        #header {width: 100%; height: 100px; background: #badefb;}
+        #banner {width: 100%; height: 300px; background: #8ecbf9; }
+        #con1 { }
+        #con1 .cont1-side {width: 30%; height: 400px; float: left; background: #61b6f6;}
+        #con1 .cont1-box1 {width: 70%; height: 200px; float: left; background: #3da7f5;}
+        #con1 .cont1-box2 {width: 70%; height: 200px; float: left; background: #1799f3;}
+        #con2 { } 
+        #con2 .cont2-box1{width: 33.3333%; height: 200px; float: left; background: #168be5;} 
+        #con2 .cont2-box2{width: 33.3333%; height: 200px; float: left; background: #127ad2;} 
+        #con2 .cont2-box3{width: 33.3333%; height: 200px; float: left; background: #0f69c0;} 
+        #con3 {overflow: hidden; background: #3da7f5; padding: 5%; }
+        #con3 >article {width: 21%; margin: 2%; height: 200px; border-radius: 5px; background: #127ad2; float: left;}
+        #footer {width: 100%; height: 100px; background: #61b6f6;}
+
+        @media (max-width: 1220px){
+            .container {width: 100%;}
+            #con2 .cont2-box1 {width: 50%;}
+            #con2 .cont2-box2 {width: 50%;}
+            #con2 .cont2-box3 {display: none;}
+            #con3 >article {width: 29.3333%; }
+            #con3 >article:cont3-box4 {display: none; }
+        }
+        @media (max-width: 768px){
+            #con2 .cont2-box1 {width: 100%; height: 200px;}
+            #con2 .cont2-box2 {width: 100%;height: 200px;}
+
+        }
+        @media (max-width: width 480px){
+            #con1 .cont1-side {width: 100%; height: 200px;}
+            #con1 .cont1-box1 {width: 100%; height: 200px;}
+            #con1 .cont1-box2 {width: 100%; height: 200px;}
+            #con3 >article {width: 96%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+       <div class="container">
+            <header id="header"></header>
+            <section id="banner"></section>
+            <section id="con1">
+                <aside class="cont1-side"></aside>
+                <article class="cont1-box1"></article>
+                <article class="cont1-box2"></article>
+            </section>
+            <section id="con2">
+                <article class="cont2-box1"></article>
+                <article class="cont2-box2"></article>
+                <article class="cont2-box3"></article>
+            </section>
+            <section id="con3">
+                <article class="cont3-box1"></article>
+                <article class="cont3-box2"></article>
+                <article class="cont3-box3"></article>
+                <article class="cont3-box4"></article>
+            </section>
+            <footer id="footer"></footer>
+       </div>
+    </div>
+</body>
+</html>

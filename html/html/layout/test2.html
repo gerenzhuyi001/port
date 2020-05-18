@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #header {background: url(../site-webstandard/img/header_bg.jpg)  repeat-x center top; }
+        .container {width: 1200px; margin: 0 auto;}
+        .row { }
+        .header {height: 227px; }
+
+        /* 헤더 메뉴 */
+        .row .header-menu{text-align: right; padding: 10px 10px 13px; transition: 0.3s;} 
+        .row .header-menu a{color: #ffffff; text-decoration: none; }
+        .row .header-menu a:hover{color: #cccccc; }
+
+        /* 헤더 타이틀 */
+        .header .header-tit {text-align: center; color: #ffffff; margin-top: 55px;}
+        .header .header-tit h1{display: inline-block; background: #51b0dc; padding: 5px 30px;}
+        .header .header-tit a{display: inline-block; color: #ffffff; text-decoration: none; padding: 10px; display: inline-block; background: #4a9abf; }
+        
+
+        /* 헤더 아이콘 */
+        .header .header-icon {text-align: center;}
+        .header .header-icon a{width: 60px; height: 60px; display: inline-block; margin-top: 50px;}
+        .header .header-icon .icon1 {background: url(../site-webstandard/img/icon.png) 0 0px;}
+        .header .header-icon .icon2 {background: url(../site-webstandard/img/icon.png) 0 -60px;}
+        .header .header-icon .icon3 {background: url(../site-webstandard/img/icon.png) 0 -120px;}
+        .header .header-icon .icon4 {background: url(../site-webstandard/img/icon.png) 0 -180px;}
+
+
+        /* 섹션1 */
+        .sec1 {width: 100%; overflow: hidden;}
+        .sec1 .side {width: 33.3333%; height: 400px; float: left; background: #61b6f6;}
+        .sec1 .article1 {width: 66.6666%; height: 200px; float: left; background: #3da7f5;}
+        .sec1 .article2 {width: 66.6666%; height: 200px; float: left; background: #1799f3;}
+
+        .sec2 {width: 100%; overflow: hidden; }
+        .sec2 .article1{width: 33.3333%; height: 300px; float: left; background: #168be5;}
+        .sec2 .article2{width: 33.3333%; height: 300px; float: left; background: #127ad2;}
+        .sec2 .article3{width: 33.3333%; height: 300px; float: left; background: #0f69c0;}
+
+        .sec3 {width: 90%; height: 300px; overflow: hidden; padding: 5%; background: #3da7f5;}
+        .sec3 > article{width: 23%; height: 250px; margin: 1%; float: left;   background: #127ad2; }
+
+        /* 푸터 */
+        .footer {width: 100%; height: 100px; background: #61b6f6; }
+
+        @media(max-width: 1220px){
+            .container {width: 100%;}
+            #header {background-image: url();}
+            .row {width: 100%; height: 100px; background: #badefb;}
+            .header {height: 300px; background:#8ecbf9; }
+            .row .header-menu,
+            .header >.header-tit,
+            .header >.header-icon,
+            .sec2 .article2,
+            .sec3 > article:last-child {display: none;}
+            .sec3 > article {width: 31%; }
+
+            .sec2 .article1 {width: 50%;}
+            .sec2 .article3 {width: 50%;}
+        }
+
+        @media(max-width: 768px){
+            .sec2 .article1 {width: 100%;}
+            .sec2 .article3 {width: 100%;}
+        }
+        @media(max-width: 480px){
+            .sec1 .side {width: 100%; height: 100px; }
+            .sec1 .article1 {width: 100%; }
+            .sec1 .article2 {width: 100%; }
+            .sec3 {width: 90%; height: 800px; padding: 5%;}
+            .sec3 > article {width: 98%; }
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="header-menu">
+                <a href="#" class="Designer">Designer</a>
+                <a href="#" class="Publisher">Publisher</a>
+                <a href="#" class="Youtube">Youtube</a>
+            </div>
+        </div>
+            <div class="header">
+                <div class="header-tit">
+                    <h1>PROFESSIONAL DESIGNER & PUBLISHER</h1> <br>
+                    <a href="gerenzhuyi.dothome.co.kr">gerenzhuyi.dothome.co.kr</a>
+                </div>
+                <div class="header-icon">
+                    <a href="#" class="icon1"></a>
+                    <a href="#" class="icon2"></a>
+                    <a href="#" class="icon3"></a>
+                    <a href="#" class="icon4"></a>
+                </div>
+            </div>
+    </div>
+</header>
+<div class="container">
+    <section class="sec1">
+        <aside class="side"></aside>
+        <article class="article1"></article>
+        <article class="article2"></article>
+    </section>
+    <section class="sec2">
+        <article class="article1"></article>
+        <article class="article2"></article>
+        <article class="article3"></article>
+    </section>
+    <section class="sec3">
+        <article class="article1"></article>
+        <article class="article2"></article>
+        <article class="article3"></article>
+        <article class="article4"></article>
+    </section>
+    <footer class="footer"></footer>
+</div>
+
+</body>
+</html>
