@@ -6,6 +6,12 @@
   top: 0;
   z-index: 1000;
   width: 100%;
+  -webkit-transition: top .3s ease;
+  transition: top .3s ease;
+}
+
+#header.on {
+  top: -240px;
 }
 
 #banner {
@@ -51,6 +57,30 @@
 }
 
 .container .header1 ul li.active a {
+  color: #000000;
+}
+
+.container .header1 ul li.active01 {
+  border-bottom: 4px solid #da1009;
+}
+
+.container .header1 ul li.active01 a {
+  color: #000000;
+}
+
+.container .header1 ul li.active02 {
+  border-bottom: 4px solid #fe8100;
+}
+
+.container .header1 ul li.active02 a {
+  color: #000000;
+}
+
+.container .header1 ul li.active03 {
+  border-bottom: 4px solid #fe8100;
+}
+
+.container .header1 ul li.active03 a {
   color: #000000;
 }
 

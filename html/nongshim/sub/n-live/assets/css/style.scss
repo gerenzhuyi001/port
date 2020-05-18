@@ -5,7 +5,11 @@
     top: 0;
     z-index: 1000;
     width: 100%;
+    transition: top .3s ease;
 
+}
+#header.on {
+    top: -240px;
 }
 
 #banner {
@@ -45,6 +49,27 @@
 
             li.active {
                 border-bottom: 4px solid #96c11f;
+
+                a {
+                    color: #000000;
+                }
+            }
+            li.active01 {
+                border-bottom: 4px solid #da1009;
+
+                a {
+                    color: #000000;
+                }
+            }
+            li.active02 {
+                border-bottom: 4px solid #fe8100;
+
+                a {
+                    color: #000000;
+                }
+            }
+            li.active03 {
+                border-bottom: 4px solid #fe8100;
 
                 a {
                     color: #000000;

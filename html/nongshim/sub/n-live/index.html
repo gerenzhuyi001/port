@@ -43,10 +43,10 @@
         <div class="container">
             <div class="header1">
                 <ul>
-                    <li class="active"><a href="#">농심</a></li>
-                    <li class="active01"><a href="#">브랜드</a></li>
-                    <li class="active02"><a href="#">누들푸들</a></li>
-                    <li class="active03"><a href="#">농심채용</a></li>
+                    <li class="active"><a href="http://www.nongshim.com/main/index">농심</a></li>
+                    <li class="active01"><a href="http://brand.nongshim.com/main/index">브랜드</a></li>
+                    <li class="active02"><a href="http://www.noodlefoodle.com/main/index">누들푸들</a></li>
+                    <li class="active03"><a href="http://recruit.nongshim.com/main/index">농심채용</a></li>
                 </ul>
             </div>
             <!-- header1 -->
@@ -99,7 +99,7 @@
         <!-- container -->
         <div class="container2">
             <div class="header3">
-                <a href="#" class="back"><img src="assets/img/multimedia-option.svg" alt="back"></a>
+                <a href="http://www.nongshim.com/main/index" class="back"><img src="assets/img/multimedia-option.svg" alt="back"></a>
                 <span>N.LIVE</span>
                 <a href="#" class="more"><img src="assets/img/vertical-dots.svg" alt="more"></a>
             </div>
@@ -504,6 +504,42 @@
         <!-- //script -->
 
         <script>
+            // 슬라이드 헤더
+            let wHeight = $(window).height(); //1000 브라우저
+            let dHeight = $(document).height(); //6000 컨텐츠
+            let hHeight = $("#header").outerHeight(); //240 헤더
+
+            let moveScroll; //스크롤 값 감지 위한 변수
+            let lastScrollTop = 0; //스크롤 마지막 위치 값
+
+            $(window).scroll(function(){
+            moveScroll = true;
+            // console.log(moveScroll);
+            });
+
+            setInterval(function(){
+            if(moveScroll){
+                hasScroll();
+                moveScroll = false;
+            }
+            // console.log(moveScroll);
+            },250);
+
+            function hasScroll(){
+            let wScroll = $(this).scrollTop();
+            // 스크롤을 내렸을 때
+            if(wScroll > hHeight){
+                $("#header").addClass("on");
+            } else {
+                // 스크롤 올렸을 때
+                if(wScroll + wHeight < dHeight){
+                $("#header").removeClass("on");
+                }
+            }
+            lastScrollTop = wScroll
+            }
+            // 슬라이드 헤더 끝
+
             // 옵션 클릭
             let options01 = $('#options>.row>.options>ul>li>.options01')
             let options02 = $('#options>.row>.options>ul>li>.options02')
@@ -554,6 +590,8 @@
                 $('#options>.row>.options>ul>.click06').addClass('click');
             });
             // 옵션 클릭 끝
+
+            
         </script>
 
 </body>
