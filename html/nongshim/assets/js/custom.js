@@ -24,3 +24,6 @@ var mySwiper3 = new Swiper ('.story .swiper-container', {
     slidesPerView: 'auto',
     centeredSlides: true
 })
+
+
+

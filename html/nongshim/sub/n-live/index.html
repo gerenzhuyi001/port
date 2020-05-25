@@ -118,25 +118,25 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/img/banner01.jpg" alt="찰비빔면">
-                        </figure>
+                        </figure> -->
                         <div class="info">
                             <h3>내 입맛에 찰지게 착! 찰비빔면, 찰송~(카피추,허영지)</h3>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/img/banner02.jpg" alt="앵그리 짜파구리">
-                        </figure>
+                        </figure> -->
                         <div class="info">
                             <h3>회원전용 포인트샵 앵그리짜파구리 큰 사발</h3>
                         </div>
                     </div>
                     <div class="swiper-slide-duplicate-prev">
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/img/banner01.jpg" alt="찰비빔면">
-                        </figure>
+                        </figure> -->
                     </div>
                 </div>
 
@@ -504,12 +504,21 @@
         <!-- script -->
         <script src="../../assets/js/jquery.min.js"></script>
         <script src="../../assets/js/swiper.min.js"></script>
-        <script src="../../assets/js/custom.js"></script>
+
         <!-- //script -->
 
         <script>
             // 헤더
-            let header
+            var nliveSwiper = new Swiper('.nlive .swiper-container', {
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 3,
+                centeredSlides: true,
+                pagination: {
+                    el: '#nlive-swiper .swiper-pagination',
+                    clickable: true,
+                },
+            });
 
             // 슬라이드 헤더
             let wHeight = $(window).height(); //1000 브라우저
@@ -547,16 +556,7 @@
             }
             // 슬라이드 헤더 끝
             // 스와이퍼배너
-            var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: '3',
-            spaceBetween: 2,
-            centeredSlides: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            });
+            
 
             // 옵션 클릭
             let options01 = $('#options>.row>.options>ul>li>.options01')

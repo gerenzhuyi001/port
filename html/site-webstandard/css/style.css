@@ -143,7 +143,7 @@
 
 /* 게시판3 */
 .notice3 {position: relative; }
-.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; marg`in-top: 15px;}
+.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; margin-top: 15px;}
 .notice3 li {position: relative; padding: 8px 0 14px 60px; }
 .notice3 li a img {width: 50px; border: 1px solid #0093bd; position: absolute; left: 0; top: 0; }
 .notice3 li a strong {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
@@ -177,8 +177,7 @@
 .col3 {position: relative;}
 .ad {position: absolute; bottom: 5px;}
 .ad h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight:bold; margin-top: 15px;}
-.ad .lightbox  {
-    }
+.ad .lightbox { }
 .ad .lightbox ul {overflow: hidden; }
 .ad .lightbox li {float: left; margin-right: 5px; width: 93px;}
 .ad .lightbox li:last-child {margin-right: 0;}
@@ -223,6 +222,18 @@
 .gallery-btn li.gb-icon3 a:hover {background-position: -173px -166px;}
 .gallery-btn li.gb-icon4 a:hover {background-position: -173px -189px;}
 .gallery-img img {width: 100%;}
+
+/*  슬릭 갤러리 */
+.gallery .gallery-btn button {float: left; margin: 1px 2px; display: block; width: 23px; height: 23px; background: url(../img/icon.png); cursor: pointer;}
+.gallery .gallery-btn .gb-icon1 {background-position: -150px -120px;}
+.gallery .gallery-btn .gb-icon2 {background-position: -150px -143px;}
+.gallery .gallery-btn .gb-icon3 {background-position: -150px -166px;}
+.gallery .gallery-btn .gb-icon4 {background-position: -150px -189px;}
+.gallery .gallery-btn .gb-icon1:hover {background-position: -173px -120px;}
+.gallery .gallery-btn .gb-icon2:hover {background-position: -173px -143px;}
+.gallery .gallery-btn .gb-icon3:hover {background-position: -173px -166px;}
+.gallery .gallery-btn .gb-icon4:hover {background-position: -173px -189px;}
+
 
 /* 로그인 */
 #login-wrap {background-color: #f2f4f5; padding: 15px; }

@@ -142,7 +142,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 60px;
+  padding: 0 60px;
+  border-bottom: 1px solid #ccc;
 }
 
 .container .header2 h1 {
@@ -325,13 +326,10 @@
   left: 43%;
 }
 
-.swiper-slide {
-  height: 732px;
-}
-
-.swiper-slide img {
-  height: 732px;
-  width: 932px;
+.swiper-slide .info {
+  padding: 20vw 0;
+  background: url(../img/banner01.jpg) center center no-repeat;
+  background-size: cover;
 }
 
 /* 버튼 */
@@ -714,5 +712,10 @@
   font-size: 14px;
   color: #cccccc;
   font-style: normal;
+}
+
+.nlive .swiper-slide {
+  background: #ccc;
+  width: 80%;
 }
 /*# sourceMappingURL=style.css.map */

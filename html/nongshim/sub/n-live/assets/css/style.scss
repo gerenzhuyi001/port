@@ -130,7 +130,8 @@
     .header2 {
         display: flex;
         justify-content: space-between;
-        margin: 0 60px;
+        padding: 0 60px;
+        border-bottom: 1px solid #ccc;
 
         h1 {
             width: 140px;
@@ -145,7 +146,7 @@
                         fill: #fff;
                     }
                 }
-            }
+            } 
         }
 
         .nav {
@@ -315,14 +316,10 @@
     }
 }
 
-.swiper-slide {
-    height: 732px;
-
-    img {
-        height: 732px;
-        width: 932px;
-    }
-
+.swiper-slide .info {
+    padding: 20vw 0;
+    background: url(../img/banner01.jpg) center center no-repeat;
+    background-size: cover;
 }
 
 
@@ -713,3 +710,6 @@
         }
     }
 }
+
+
+.nlive .swiper-slide {background: #ccc; width: 80%; }
