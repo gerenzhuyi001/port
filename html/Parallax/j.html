@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn1">Click</button>
+    <div class="selector" id="selector">
+        <div class="box">jQuery vs Javascript</div>
+        <div class="box">jQuery vs Javascript</div>
+        <div class="box add">jQuery vs Javascript</div>
+        <div class="box">jQuery vs Javascript</div>
+        <div class="box">jQuery vs Javascript</div>
+    </div>
+
+    <div>
+        <ul id="list">
+            <li>list01</li>
+            <li>list02</li>
+            <li>list03</li>
+            <li>list04</li>
+            <li>list05</li>
+            <li>list06</li>
+            <li>list07</li>
+            <li>list08</li>
+            <li>list09</li>
+            <li>list010</li>
+        </ul>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script>
+        //제이쿼리를 이용해서 글씨 색을 빨간색으로 변경하세요~
+        // $(".box").css("color","red");
+
+        //자바스크립트를 이용해서 글씨 색을 빨간색으로 변경하세요~
+        // document.querySelector(".selector").style.color = "red";
+        // document.getElementById("selector").style.color = "red";
+        // document.querySelectorAll(".box").style.color = "red"; :선택은 되었으나 몇 개가 있는지 모름. 몇 개에게 색을 줘야하는지 모름.
+
+        // 다중 선택자 비교
+        // $("#list li").css("color","red");
+        // let list = document.getElementById("list"); //id선택자
+        // let listLi = list.getElementsByTagName("li"); //자식 li를 선택
+        // for(let i = 0; i<listLi.length; i++) {   //li 수만큼 실행
+        //     let li = listLi[i];                      // 배열에 저장
+        //     li.style.color = 'red';              //스타일 속성 지정
+        // }
+
+        // 다중 선택
+        // $(".box").css("color","red");
+        // document.querySelector(".box").style.color = "red";   //다중 선택(x))
+        // document.querySelectorAll(".box").style.color = "red"; //다중 선택(x)
+        // let box = document.querySelectorAll(".box");
+        // for(let i=0; i<=box.length; i++){
+        //     box[i].style.color="red"
+        // }
+
+        // document.querySelectorAll(".box").forEach(box =>{box.style.color = 'red'});
+
+        //태그 선택자
+        // $("div").css("color","blue");
+        // document.getElementsByTagName("div").style.color = 'bule'
+
+        //선택
+        // const selector = $("#selector");
+        // const box = selector.find("box");
+        // selector.css("color","blue")
+
+        // const selector = document.getElementById("selector");
+        // const box = document.querySelector(".box");
+        // box.style.color = "blue";
+
+        // const boxAll = document.querySelectorAll(".box");
+        // boxAll.forEach(box => {box.style.color = "bule"})
+
+        //
+        // $(".box").hide();
+        // document.querySelectorAll(".box").forEach(box =>{box.style.display = 'none'});
+
+        // $(".box").show();
+        // document.querySelectorAll(".box").forEach(box =>{box.style.display = "block"});
+
+        //클래스 추가하기
+        // $(".box").addClass("add");
+        // document.querySelectorAll(".box").forEach(box =>{box.classList.add('add')});
+
+        // $(".box").removeClass("add");
+        // document.querySelectorAll(".box").forEach(box =>{box.classList.remove('add')});
+
+        //버튼을 클릭, 글씨 빨간
+        // $("btn1").click(function(){
+        //     $(".selector").css("color", "red");
+        // })
+        // $(".btn1").on("click", function(){
+        //     $(".box").css("color", "red");
+        // });
+        // document.querySelector(".btn1").addEventListener("click",function(){$(".box").css("color", "red");});
+
+        // // $(".box").toggleClass("add");
+        // document.querySelector(".btn1").addEventListener("click",function(){
+        //     document.querySelectorAll(".box").forEach(box =>{box.classList.toggle('add')});
+        // });
+
+        // $(".box").on("mouseenter", function(){
+        //     $(".box").css("color", "red");
+        // })
+
+        //안 됨
+        // document.querySelectorAll(".selector").addEventListener("mouseenter", function(){
+        //     document.querySelectorAll(".selector").forEach(box =>{box.style.color = 'red';});
+        // });
+
+        // document.querySelector(".selector").addEventListener("mouseleave", function(){
+        //     document.querySelectorAll(".selector").forEach(box =>{box.style.color = 'blue'});
+        // });
+
+
+        // if( $(".box").hasClass("add")){
+        //     $(".add").css("color","blue");
+        // }
+
+        // hasClass= contain
+        // if(document.querySelector("#selector").classList.contains("selector")) {
+        //     document.querySelector(".selector").style.color = "blue"
+        // }
+
+
+        // $(".btn1").click(function(){
+        //     $(".selector").append("<div class='box'>jQuery vs Javascript</div>");
+        //     $(".selector").prepend("<div class='box'>jQuery vs Javascript</div>");
+        // })
+        // $(".btn1").click(function(){
+        //     $(".selector").append( $(".selector> div:last-child").clone());
+        // $(".selector").prepend( $(".selector> div:last-child").clone());
+        // })
+        //appendChild, prependChild
+
+        // 안 됨
+        document.querySelector(".btn1").addEventListener("click", function () {
+            let elem = document.getElementById("selector"); // LI 엘리먼트를 생성한다. 
+            let doc = document.createElement("div");
+            elem.appendChild(doc)
+        })
+    </script>
+</body>
+
+</html>
