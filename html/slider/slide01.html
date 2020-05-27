@@ -13,44 +13,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: 0;
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        @font-face { 
+            font-family: 'GmarketSansMedium'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
         }
-
-        a {
-            text-decoration: none;
-            color: 666px;
-        }
-
-        img {
-            width: 100%;
-            vertical-align: top;
-        }
-
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        a {text-decoration: none; color: #fff;}
+        img {width: 100%; vertical-align: top;}
+        ul {padding: 10px 20px;}
         body {
             background: url(img/00.png) no-repeat center center;
             background-size: cover;
-            font-family: "Great Vibes", "Playfair Display", "Nanum Myeongjo";
-            height: 100vh;
+            font-family: 'Abel', 'GmarketSansMedium';
             color: #fff;
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
             height: 100vh;
-            background: rgba(50, 37, 11, 0.86);
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(50,37,11,0.86);
             z-index: -1;
         }
         .info {
             position: absolute; left: 0; top: 0; z-index: 1000;
             padding: 20px;
-            text-align: right;
+        }
+        .info h1 {
+            margin-bottom: 10px;
+        }
+        .info2 {
+            position: absolute; right: 0; top: 0; z-index: 1000;
+            padding: 20px;
+        }
+        .info2 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .info2 li.active a {
+            border-bottom: 1px dashed #fff;
         }
 
         p {
@@ -85,7 +89,15 @@
         <h1>Image Slider01</h1>
         <p>페이드 효과 이미지 슬라이드</p>
     </div>
-
+    <div class="info2">
+        <ul>
+            <li class="active"><a href="slide01.html">slide01</a></li>
+            <li ><a href="slide02.html">slide02</a></li>
+            <li><a href="slide03.html">slide03</a></li>
+            <li><a href="slide04.html">slide04</a></li>
+            <li><a href="slide05.html">slide05</a></li>
+        </ul>
+    </div>
     <div class="slide-wrap">
         <div class="slide-img">
             <div class="slides"><img src="img/00.png" alt="이미지1"></div>
@@ -121,7 +133,6 @@
             // console.log("nextindex:"+nextIndex)
 
             currentIndex = nextIndex
-            document.write(currentIndex)
         }
         setInterval(showNext, 3000)
     </script>

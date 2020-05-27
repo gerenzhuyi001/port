@@ -1,0 +1,17 @@
+<script>
+    const sliderWrap = $(".slider-wrap");
+    const sliderImg = $(".slider-img");
+    const slides = $(".slides");
+
+    setInterval(function(){
+        sliderImg.animate({left : "-1000px"}, 400, function(){
+            sliderImg.css("left","");
+        });
+    },3000);
+    
+
+    $(".slides:first-child").appendTo(sliderImg);
+</script>
+
+
+
