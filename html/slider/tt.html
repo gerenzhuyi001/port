@@ -1,16 +1,39 @@
 <script>
     const sliderWrap = $(".slider-wrap");
     const sliderImg = $(".slider-img");
-    const slides = $(".slides");
+    const sliders = $(".slides");
+    const sliderBtn = $(".slide-btn");
 
-    setInterval(function(){
-        sliderImg.animate({left : "-1000px"}, 400, function(){
-            sliderImg.css("left","");
-        });
-    },3000);
-    
+    let slideCount = sliders.length;
+    let sliderWidth = sliders.width();
+    let sliderHeight = sliders.height();
+    let sliderTotalWidth = slideCount * sliderWidth;
 
-    $(".slides:first-child").appendTo(sliderImg);
+    sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); 
+    sliderImg.css({marginLeft: -sliderWidth});
+    $(".slides:last-child").prependTo(sliderImg);
+
+    function moveLeft(){
+        sliderImg.animate({left: +sliderWidth},400, function(){
+            $(".slides:last-child").prependTo(sliderImg);
+            sliderImg.css("left", "");
+        })
+    }
+    function moveRight(){
+        sliderImg.animate({left: -sliderWidth},400, function(){
+            $(".slides:first-child").appendTo(sliderImg);
+            sliderImg.css("left", "");
+        })
+    }
+
+    sliderBtn.find(".prev").click(function(){
+        moveLeft()
+    });
+    sliderBtn.find(".next").click(function(){
+        moveRight()
+    });
+
+
 </script>
 
 

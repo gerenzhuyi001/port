@@ -361,15 +361,19 @@
         //     });
         // });
 
+            // 안됨 아. ..............................
         window.addEventListener("scroll", ()=>{
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) + screen.height / 2;
             document.querySelector(".pageYOffset").textContent = pageYOffset;
-
-            document.querySelectorAll(".content-item").forEach(()=>{
-                let offset1 = (scrollTop - document.querySelector(this).pageYOffset) * 0.1;
-                document.querySelector(this).find.document.querySelectorAll(".content-item").style.transform ="translateY("+offset2+"px)";
-            })
-        })
+            //elem 이 this
+            document.querySelectorAll(".content-item").forEach(elem=>{
+                // childNodes?
+                // console.log(elem.childNodes[7]) 
+                let target = elem.childNodes[7];
+                let offset = (pageYOffset - elem.offsetTop) * 0.2;
+                target.style.transform ="translateY("+offset+"px)";
+            });
+        });
     </script>
 </body>
 
