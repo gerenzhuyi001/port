@@ -183,8 +183,8 @@
 
         sliders.css({width: sliderWidth, height: sliderHeight}); //반응형에 강함
         sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); //반응형에 강함
-        sliderImg.css({marginLeft: -sliderWidth});
-        $(".slides:last-child").prependTo(sliderImg);
+       sliderImg.css({marginLeft: -sliderWidth});
+       $(".slides:last-child").prependTo(sliderImg);
 
         function moveLeft(){
             sliderImg.animate({left: +sliderWidth},400, function(){
