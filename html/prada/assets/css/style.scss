@@ -110,6 +110,7 @@
         margin: 0 auto;
         .main-banner-swiper-wrapper {
             .main-banner-swiper-slide {
+                position: relative;
                 .main-banner-swiper-slide-a {
                     display: inline-block;
                     width: 100%;
@@ -119,10 +120,14 @@
                         height: inherit;
                     }
                     .main-banner-swiper-slide-tbox{
+                        position: absolute;
+                        bottom: 0;
+                        display: inline-block;
                         color: #fff;
                         .main-banner-swiper-slide-info {
                             .main-banner-swiper-slide-info-tit{
                                 font-weight: 700;
+                                color: #ffffff;
                             }
                         }
                     }
@@ -131,7 +136,7 @@
                 //     background-image: url(../img/main-banner01.jpg);
                 //     background-size: cover;
                 // }
-                // .main-banner-swiper-slide-img02 {
+                // .main-banBner-swiper-slide-img02 {
                 //     background-image: url(../img/main-banner02.jpg);
                 //     background-size: cover;
                 // }
