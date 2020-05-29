@@ -48,9 +48,9 @@
 
 #ghost-header .ghost-header-right {
   display: inline-block;
-  float: right;
+  float: none;
   padding-top: 25px;
-  margin-right: 160px;
+  margin-left: 570px;
 }
 
 #ghost-header .ghost-header-right .ghost-header-right-a {
@@ -128,34 +128,199 @@
   background-image: url(../icon/icon-search-black.svg);
 }
 
-#main-banner .main-banner-swiper-container {
-  margin: 0 auto;
+#container {
+  margin: 0 110px;
 }
 
-#main-banner .main-banner-swiper-container .main-banner-swiper-wrapper .main-banner-swiper-slide {
+#banner .swiper-container .swiper-wrapper .swiper-slide {
   position: relative;
 }
 
-#main-banner .main-banner-swiper-container .main-banner-swiper-wrapper .main-banner-swiper-slide .main-banner-swiper-slide-a {
-  display: inline-block;
+#banner .swiper-container .swiper-wrapper .swiper-slide .img {
+  height: 920px;
   width: 100%;
-  height: 910px;
+  background: url(../img/main-banner01.jpg) center center;
+  background-size: cover;
 }
 
-#main-banner .main-banner-swiper-container .main-banner-swiper-wrapper .main-banner-swiper-slide .main-banner-swiper-slide-a img {
-  max-width: 1600px;
-  height: inherit;
-}
-
-#main-banner .main-banner-swiper-container .main-banner-swiper-wrapper .main-banner-swiper-slide .main-banner-swiper-slide-a .main-banner-swiper-slide-tbox {
+#banner .swiper-container .swiper-wrapper .swiper-slide .info {
   position: absolute;
-  bottom: 0;
-  display: inline-block;
-  color: #fff;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  height: 10%;
+  text-align: center;
 }
 
-#main-banner .main-banner-swiper-container .main-banner-swiper-wrapper .main-banner-swiper-slide .main-banner-swiper-slide-a .main-banner-swiper-slide-tbox .main-banner-swiper-slide-info .main-banner-swiper-slide-info-tit {
+#banner .swiper-container .swiper-wrapper .swiper-slide .info h3 {
+  font-weight: 700;
+  font-size: 41px;
+  color: #ffffff;
+}
+
+#banner .swiper-container .swiper-wrapper .swiper-slide .info p {
+  color: #ffffff;
+}
+
+#banner .swiper-container .swiper-wrapper .swiper-slide .info a {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+  background-size: 100% 100% 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#banner .swiper-container .swiper-wrapper .swiper-slide .info a:hover {
+  color: #000000;
+  background: #fff;
+  background-size: 100%;
+}
+
+#con-container {
+  margin: 0 130px;
+}
+
+.contents01 .gender {
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+  padding: 15px 0;
+  margin: 25px 0;
+}
+
+.contents01 .gender .gender-btn01 {
+  text-align: right;
+  width: 50%;
+  float: left;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contents01 .gender .gender-btn01 .female-btn {
+  padding-right: 10px;
+}
+
+.contents01 .gender .gender-btn02 {
+  width: 50%;
+  float: left;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contents01 .gender .gender-btn02 .male-btn {
+  position: relative;
+  padding-left: 10px;
+}
+
+.contents01 .gender .gender-btn02 .male-btn::before {
+  position: absolute;
+  content: "";
+  left: -0px;
+  width: 1px;
+  height: 45px;
+  background: #fff;
+}
+
+.contents01 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 900px;
+}
+
+.contents01 .card .img01 {
+  position: relative;
+  background: url(../img/Card-fm01.jpg) center center no-repeat;
+  background-size: cover;
+  -ms-flex-preferred-size: 49.5%;
+      flex-basis: 49.5%;
+}
+
+.contents01 .card .img01 .card-info {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+}
+
+.contents01 .card .img01 .card-info span {
+  display: block;
+  font-size: 41px;
   font-weight: 700;
   color: #ffffff;
+  line-height: 40px;
+}
+
+.contents01 .card .img01 a {
+  position: absolute;
+  bottom: 2%;
+  right: 3%;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+  background-size: 100% 100% 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contents01 .card .img01 a:hover {
+  color: #000000;
+  background: #fff;
+  background-size: 100%;
+}
+
+.contents01 .card .img02 {
+  position: relative;
+  background: url(../img/Card-fm02.jpg) center center no-repeat;
+  background-size: cover;
+  -ms-flex-preferred-size: 49.5%;
+      flex-basis: 49.5%;
+}
+
+.contents01 .card .img02 .card-info {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+}
+
+.contents01 .card .img02 .card-info span {
+  display: block;
+  font-size: 41px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 40px;
+}
+
+.contents01 .card .img02 a {
+  position: absolute;
+  bottom: 2%;
+  right: 3%;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+  background-size: 100% 100% 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.contents01 .card .img02 a:hover {
+  color: #000000;
+  background: #fff;
+  background-size: 100%;
 }
 /*# sourceMappingURL=style.css.map */

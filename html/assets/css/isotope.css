@@ -72,13 +72,14 @@
   margin-bottom: 1%;
   float: left;
 
-  border-bottom: 3px solid #a5d5fa;
+  border-bottom: 3px solid #FFB291;
   background-color: #fff;
+  transition: opacity 0.3s ease-in-out;
 }
-.color-shape:first-child:hover {
-    border-bottom: 3px solid #a92c76;
+.color-shape:hover {
+    border-bottom: 3px solid #FFA887;
 }
-.color-shape:nth-child(2):hover {
+/* .color-shape:nth-child(2):hover {
     border-bottom: 3px solid #82c60a;
 }
 .color-shape:nth-child(3):hover {
@@ -134,7 +135,7 @@
 }
 .color-shape:nth-child(20):hover {
     border-bottom: 3px solid #824b3d;
-}
+} */
 
 
 
