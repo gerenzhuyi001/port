@@ -181,7 +181,7 @@
   background-size: 100%;
 }
 
-#con-container {
+#container02 {
   margin: 0 130px;
 }
 
@@ -474,5 +474,65 @@
 
 .store a .store-info .desc {
   color: #ffffff;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer .fbox {
+  margin-left: 20px;
+}
+
+.footer .fbox .logo {
+  display: block;
+  margin: 70px 0 55px;
+  width: 75px;
+  height: 14px;
+  background: url(../icon/logo_prada_b.svg) no-repeat;
+}
+
+.footer .fbox .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer .fbox .list ul {
+  display: inline-block;
+  width: 330px;
+}
+
+.footer .fbox .list ul strong {
+  display: block;
+  padding: 0 0 20px;
+}
+
+.footer .fbox address {
+  padding: 25px 0 15px;
+  font-style: normal;
+}
+
+.footer .fbox p {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 11px;
+}
+
+.footer .sns {
+  position: absolute;
+  right: -8%;
+  top: 30%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer .sns a {
+  padding-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */

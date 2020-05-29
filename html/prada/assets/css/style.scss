@@ -197,7 +197,7 @@
 //배너 끝
 
 //컨텐츠
-#con-container {
+#container02 {
     margin: 0 130px;
 }
 
@@ -491,6 +491,53 @@
                 color: #ffffff;
             }
         }
+    }
+}
 
+
+//푸터
+.footer {
+    position: relative;
+    .fbox {
+        margin-left: 20px;
+        .logo {
+            display: block;
+            margin: 70px 0 55px;
+            width: 75px;
+            height: 14px;
+            background: url(../icon/logo_prada_b.svg) no-repeat;
+        }
+        .list {
+            display: flex;
+            align-items: flex-start;
+            ul {
+                display: inline-block;
+                width: 330px;
+      
+                strong {
+                    display: block;
+                    padding: 0 0 20px;
+                }
+            }
+        }
+        address {
+            padding: 25px 0 15px;
+            font-style: normal;
+        }
+        p {
+            display: block;
+            margin-bottom: 40px;
+            font-size: 11px;
+        }
+    }
+    .sns {
+        position: absolute;
+        right: -8%; top: 30%;
+        transform: rotate(-90deg);
+        font-size: 12px;
+        font-weight: 700;
+        a {
+            padding-right: 5px;
+        }
     }
 }
