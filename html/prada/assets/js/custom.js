@@ -1,10 +1,15 @@
-var swiper = new Swiper('#main-banner .main-banner-swiper-container', {
-    scrollbar: {
-      el: '.main-banner-swiper-scrollbar',
-      hide: true,
-    },
-    navigation: {
-        nextEl: '.main-banner-swiper-button-next',
-        prevEl: '.main-banner-swiper-button-prev',
-      },
-  });
+var swiper = new Swiper('#banner .swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  keyboard: {
+      enabled: true,
+  },
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+});

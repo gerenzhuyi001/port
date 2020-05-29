@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide06 - 좌우로 움직이기</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        ul {
+            padding: 10px 20px;
+        }
+
+        body {
+            background: url(img/00.png) no-repeat center center;
+            background-size: cover;
+            font-family: 'Abel', 'GmarketSansMedium';
+            color: #fff;
+            height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(50, 37, 11, 0.86);
+            z-index: -1;
+        }
+
+        .info {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .info h1 {
+            margin-bottom: 10px;
+        }
+
+        .info li {
+            font-size: 12px;
+        }
+
+        .info2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .info2 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .info2 li.active a {
+            border-bottom: 1px dashed #fff;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        /* slide */
+        .slider-wrap {
+            width: 1200px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .slider-img {
+            position: relative;
+            overflow: hidden;
+            width: 10000px;
+        }
+
+        .slider-img .slides {
+            float: left;
+            width: 400px;
+            padding: 10px;
+        }
+
+        .slide-btn a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%, -50%);
+            z-index: 1000;
+            padding: 20px;
+            background: rgba(0, 0, 0, .5);
+            text-transform: uppercase;
+        }
+
+        .slide-btn a.prev {
+            left: 0;
+        }
+
+        .slide-btn a.next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info">
+        <h1>Image Slider06</h1>
+        <p>좌우로 움직이기</p>
+        <ul>
+            <li>3초에 한 번씩 좌로 움직이기</li>
+            <li>연속적으로 움직이기</li>
+            <li>버튼으로 움직이기</li>
+        </ul>
+    </div>
+    <div class="info2">
+        <ul>
+            <li><a href="slide01.html">slide01</a></li>
+            <li><a href="slide02.html">slide02</a></li>
+            <li><a href="slide03.html">slide03</a></li>
+            <li><a href="slide04.html">slide04</a></li>
+            <li><a href="slide05.html">slide05</a></li>
+            <li class="active"><a href="slide06.html">slide06</a></li>
+        </ul>
+    </div>
+
+    <div class="slider-wrap">
+        <div class="slider-img">
+            <div class="slides s1"><img src="img/00.png" alt="이미지1"></div>
+            <div class="slides s2"><img src="img/01.png" alt="이미지2"></div>
+            <div class="slides s3"><img src="img/02.png" alt="이미지3"></div>
+            <div class="slides s4"><img src="img/03.png" alt="이미지4"></div>
+            <div class="slides s5"><img src="img/04.png" alt="이미지5"></div>
+        </div>
+    </div>
+    <div class="slide-btn">
+        <a href="#" class="prev">prev</a>
+        <a href="#" class="next">next</a>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const sliders = $(".slides");
+        const sliderBtn = $(".slide-btn");
+
+        let slideCount = sliders.length;
+        let sliderWidth = sliders.outerWidth();
+        let sliderHeight = sliders.height();
+        let sliderTotalWidth = slideCount * sliderWidth;
+
+        // sliders.css({width: sliderWidth, height: sliderHeight}); //반응형에 강함
+        // sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); //반응형에 강함
+        // sliderImg.css({marginLeft: -sliderWidth});
+        // $(".slides:last-child").prependTo(sliderImg);
+
+        let currentIndex = 0;
+        let slideCopy = sliders.clone();
+        sliderImg.append(slideCopy);
+
+        function moveLeft() {
+            //이미지를 왼쪽(+)으로 이동(박스의 크기)
+            if (currentIndex == 0) {
+                currentIndex = 5
+                sliderImg.css('margin-left', -currentIndex * sliderWidth + "px"); //left=0
+            }
+            currentIndex--;
+            sliderImg.animate({"margin-left": -sliderWidth * currentIndex + "px"}, 400); //left=-400 ~ -2000, 0 (반복)
+            console.log(currentIndex)
+        }
+
+        function moveRight() {
+            //이미지를 왼쪽(-)으로 이동(박스의 크기)
+
+            if (currentIndex == slideCount) {
+                currentIndex = 0
+                sliderImg.css('margin-left', -currentIndex * sliderWidth + "px"); //슬라이드가 끝나도 앞으로 돌아가지 않고 계속 이어지는 것처럼 보임 //left=0
+                //-400~ -2000 다음 처음 값으로 -400으로 돌아가는 걸 0으로 초기화 시켜줌...
+            }
+            currentIndex++;
+            sliderImg.animate({"margin-left": -sliderWidth * currentIndex + "px"}, 400);
+        }
+
+        sliderBtn.on("click", "a", function () {
+            if ($(this).hasClass("prev")) {
+                moveLeft()
+            } else {
+                moveRight()
+            }
+
+            //조건부 연산자
+            // $(this).hasClass("prev") ? moveLeft() : moveRight();
+        });
+    </script>
+</body>
+
+</html>

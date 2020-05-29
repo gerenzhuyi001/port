@@ -1,3 +1,52 @@
+//8단
+<script>
+    const sliderWrap = $(".slider-wrap");
+    const sliderImg = $(".slider-img");
+    const sliders = $(".slides");
+    const sliderBtn = $(".slide-btn");
+    const sliderDot = $(".slide-dot");
+
+    let slideCount = sliders.length;
+    let sliderWidth = sliders.width();
+    let sliderHeight = sliders.height();
+    let sliderTotalWidth = slideCount * sliderWidth;
+
+    let currentIndex = 0;
+    let dotIndex = "";
+
+    sliders.each(function(index){
+        dotIndex += "<a href='#'></a>";
+    }) 
+    sliderDot.html(dotIndex);
+    sliderDot.find("a").eq(0).addClass("active");
+
+    function gotoSlider(index){
+        // console.log("index :" + index);
+        sliderImg.animate({left: -sliderWidth * index + "px"}, 400)
+        currentIndex = index;
+        updateDot();
+    }
+    function updateDot(){
+        sliderDot.find("a").removeClass().eq(currentIndex).addClass("active");
+    }
+    sliderBtn.on("click", "a", function (e) {
+        e.preventDefault();
+
+        let nextIndex = (currentIndex + 1) % slideCount
+        let prevIndex = (currentIndex - 1) % slideCount
+
+        if(currentIndex == 0) {prevIndex = slideCount -1}
+
+        if ($(this).hasClass("prev")){
+            gotoSlider(prevIndex);
+        } else {
+            gotoSlider(nextIndex);
+        }
+    });
+
+</script>
+
+//7단
 <script>
     const sliderWrap = $(".slider-wrap");
     const sliderImg = $(".slider-img");
@@ -5,34 +54,41 @@
     const sliderBtn = $(".slide-btn");
 
     let slideCount = sliders.length;
-    let sliderWidth = sliders.width();
+    let sliderWidth = sliders.outerWidth();
     let sliderHeight = sliders.height();
     let sliderTotalWidth = slideCount * sliderWidth;
 
-    sliderImg.css({width: sliderTotalWidth, height: sliderHeight}); 
-    sliderImg.css({marginLeft: -sliderWidth});
-    $(".slides:last-child").prependTo(sliderImg);
+    let currentIndex = 0;
+    let slideCopy = sliders.clone();
+    sliderImg.append(slideCopy);
 
-    function moveLeft(){
-        sliderImg.animate({left: +sliderWidth},400, function(){
-            $(".slides:last-child").prependTo(sliderImg);
-            sliderImg.css("left", "");
-        })
-    }
-    function moveRight(){
-        sliderImg.animate({left: -sliderWidth},400, function(){
-            $(".slides:first-child").appendTo(sliderImg);
-            sliderImg.css("left", "");
-        })
+    function moveLeft() {
+        if (currentIndex == 0) {
+            currentIndex = 5
+            sliderImg.css('margin-left', -currentIndex * sliderWidth + "px"); 
+        }
+        currentIndex--;
+        sliderImg.animate({"margin-left": -sliderWidth * currentIndex + "px"}, 400); 
+        console.log(currentIndex)
     }
 
-    sliderBtn.find(".prev").click(function(){
-        moveLeft()
+    function moveRight() {
+        if (currentIndex == slideCount) {
+            currentIndex = 0
+            sliderImg.css('margin-left', -currentIndex * sliderWidth + "px");
+        }
+        currentIndex++;
+        sliderImg.animate({"margin-left": -sliderWidth * currentIndex + "px"}, 400);
+    }
+
+    sliderBtn.on("click", "a", function () {
+        if ($(this).hasClass("prev")) {
+            moveLeft()
+        } else {
+            moveRight()
+        }
+
     });
-    sliderBtn.find(".next").click(function(){
-        moveRight()
-    });
-    
 </script>
 
 

@@ -1,145 +1,561 @@
 // 메인
 
 // 헤더
-#ghost-header {
+#header {
     position: fixed;
     top: 0;
     width: 100%;
     height: 76px;
     z-index: 1000;
     transition: all .7s ease;
-    .ghost-header-left{
-        position: relative;
-        padding: 25px 40px 0;
-        width: 600px;
-        margin-left: 112px;
-        display: inline-block;
-        .ghost-header-logo-w {
+    .row {
+        display: flex;
+        margin: 25px 140px 0 120px;
+        justify-content: space-between;
+        .left {
+            position: relative;
+            width:75%;
             display: inline-block;
-            width: 166px;
-            span {
+            margin-left: 20px;
+    
+            .logo-w {
                 display: inline-block;
                 width: 166px;
-                height: 26px;
-                background-image: url(../icon/logo_prada_w.svg);
+    
+                span {
+                    display: inline-block;
+                    width: 166px;
+                    height: 26px;
+                    background-image: url(../icon/logo_prada_w.svg);
+                }
             }
-        }
-        .ghost-header-left-list-ul {
-            position: absolute;
-            bottom: 3px;
-            margin-left: 2px;
-            display: inline-block;
-            .ghost-header-left-list-li {
+    
+            ul {
+                position: absolute;
+                bottom: 3px;
+                margin-left: 2px;
                 display: inline-block;
-                .ghost-header-left-list-a {
-                    margin-left: 23px;
-                    font-size: 13px;
-                    font-weight: bold;
-                    color: #ffffff;
+    
+                li {
+                    display: inline-block;
+    
+                    a {
+                        margin-left: 23px;
+                        font-size: 13px;
+                        font-weight: bold;
+                        color: #ffffff;
+                    }
                 }
             }
         }
-    }
-
-    .ghost-header-right {
-        display: inline-block;
-        float: right;
-        padding-top: 25px;
-        margin-right: 160px;
-        .ghost-header-right-a {
+    
+        .right {
             display: inline-block;
-            color: #fff;
-            font-size: 11px;
-            padding: 10px 7px 5px;
-            .ghost-header-right-icon {
+            float: none;
+            width: 25%;
+            text-align: right;
+    
+            a {
                 display: inline-block;
-                width: 20px; height: 20px;
-                background-size: contain;
+                color: #fff;
+                font-size: 11px;
+                padding: 10px 7px 5px;
+    
+                .icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background-size: contain;
+                }
+    
+                .call {
+                    background-image: url(../icon/icon_phone-white.svg);
+                }
+    
+                .user {
+                    background-image: url(../icon/icon-user-white.svg);
+                }
+    
+                .heart {
+                    background-image: url(../icon/icon-favorite-white.svg);
+                }
+    
+                .sbag {
+                    background-image: url(../icon/icon-shopping-bag-white.svg);
+                }
+    
+                .search {
+                    background-image: url(../icon/icon-search-white.svg);
+                }
             }
-            .ghost-header-right-call-icon {
-                background-image: url(../icon/icon_phone-white.svg);
-            }
-            .ghost-header-right-user-icon {
-                background-image: url(../icon/icon-user-white.svg);
-            }
-            .ghost-header-right-heart-icon {
-                background-image: url(../icon/icon-favorite-white.svg);
-            }
-            .ghost-header-right-sbag-icon {
-                background-image: url(../icon/icon-shopping-bag-white.svg);
-            }
-            .ghost-header-right-search-icon {
-                background-image: url(../icon/icon-search-white.svg);
+    
+            .call-languge {
+                position: relative;
+                bottom: 3px;
             }
         }
-        .ghost-header-right-call-languge {position: relative; bottom: 3px;}
     }
+    
 }
 
 // 헤더 스크롤
-#ghost-header.notghost {background: #fff;}
-#ghost-header.notghost .ghost-header-left .ghost-header-left-list-ul .ghost-header-left-list-li a {
+#header.scroll {
+    background: #fff;
+}
+
+#header.scroll .left ul li a {
     color: #000000;
 }
-#ghost-header.notghost .ghost-header-left .ghost-header-logo-w span {
+
+#header.scroll .left .logo-w span {
     background-image: url(../icon/logo_prada_b.svg);
 }
-#ghost-header.notghost .ghost-header-right a {
+
+#header.scroll .right a {
     color: #000000;
 }
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-call-icon {
+
+#header.scroll .right a .call {
     background-image: url(../icon/icon_phone-black.svg);
 }
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-user-icon {
+
+#header.scroll .right a .user {
     background-image: url(../icon/icon-user-black.svg);
 }
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-heart-icon {
+
+#header.scroll .right a .heart {
     background-image: url(../icon/icon-favorite-black.svg);
 }
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-sbag-icon {
+
+#header.scroll .right a .sbag {
     background-image: url(../icon/icon-shopping-bag-black.svg);
 }
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-search-icon {
+
+#header.scroll .right a .search {
     background-image: url(../icon/icon-search-black.svg);
 }
+
 // 헤더 끝
 
-// 메인 배너
-#main-banner {
-    .main-banner-swiper-container {
-        margin: 0 auto;
-        .main-banner-swiper-wrapper {
-            .main-banner-swiper-slide {
-                .main-banner-swiper-slide-a {
-                    display: inline-block;
+
+
+// 배너
+#container {
+    margin: 0 110px;
+}
+
+#banner {
+    .swiper-container {
+        .swiper-wrapper {
+            
+            .swiper-slide {
+                position: relative;
+                height: 920px;
+
+                .img01 {
+                    height: 920px;
                     width: 100%;
-                    height: 910px;
-                    img {
-                        max-width: 1600px;
-                        height: inherit;
+                    background: url(../img/main-banner01.jpg) center center;
+                    background-size: cover;
+                }
+                .img02 {
+                    height: 920px;
+                    width: 100%;
+                    background: url(../img/main-banner02.jpg) center center;
+                    background-size: cover;
+                }
+                .img03 {
+                    height: 920px;
+                    width: 100%;
+                    background: url(../img/main-banner03.jpg) center center;
+                    background-size: cover;
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 0;
+                    right: 0;
+                    height: 10%;
+                    text-align: center;
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 41px;
+                        color: #ffffff;
                     }
-                    .main-banner-swiper-slide-tbox{
-                        color: #fff;
-                        .main-banner-swiper-slide-info {
-                            .main-banner-swiper-slide-info-tit{
-                                font-weight: 700;
-                            }
+
+                    p {
+                        color: #ffffff;
+                    }
+
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 5px;
+                        color: #ffffff;
+                        font-weight: 700;
+                        border-bottom: 1px solid #fff;
+                        background-size: 100% 100% 0;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: #000000;
+                            background: #fff;
+                            background-size: 100%;
                         }
                     }
                 }
-                // .main-banner-swiper-slide-img01 {
-                //     background-image: url(../img/main-banner01.jpg);
-                //     background-size: cover;
-                // }
-                // .main-banner-swiper-slide-img02 {
-                //     background-image: url(../img/main-banner02.jpg);
-                //     background-size: cover;
-                // }
-                // .main-banner-swiper-slide-img03 {
-                //     background-image: url(../img/main-banner03.jpg);
-                //     background-size: cover;
-                // }
             }
+        }
+    }
+}
+
+//배너 끝
+
+//컨텐츠
+#container02 {
+    margin: 0 130px;
+}
+
+//컨텐츠01
+.contents01 {
+
+
+    .gender {
+        overflow: hidden;
+        width: 100%;
+        background: #000;
+        padding: 15px 0;
+        margin: 25px 0;
+
+        .gender-btn01 {
+            text-align: right;
+            width: 50%;
+            float: left;
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: 500;
+
+            .female-btn {
+                padding-right: 10px;
+            }
+        }
+
+        .gender-btn02 {
+            width: 50%;
+            float: left;
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: 500;
+
+            .male-btn {
+                position: relative;
+                padding-left: 10px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: -0px;
+                    width: 1px;
+                    height: 45px;
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-between;
+        height: 900px;
+
+        .img01 {
+            position: relative;
+            background: url(../img/Card-fm01.jpg) center center no-repeat;
+            background-size: cover;
+            flex-basis: 49.5%;
+
+            .card-info {
+                position: absolute;
+                bottom: 3%;
+                left: 3%;
+
+                span {
+                    display: block;
+                    font-size: 41px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    line-height: 40px;
+                }
+            }
+
+            a {
+                position: absolute;
+                bottom: 2%;
+                right: 3%;
+                display: inline-block;
+                margin-top: 10px;
+                padding: 5px;
+                color: #ffffff;
+                font-weight: 700;
+                border-bottom: 1px solid #fff;
+                background-size: 100% 100% 0;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #000000;
+                    background: #fff;
+                    background-size: 100%;
+                }
+            }
+        }
+
+        .img02 {
+            position: relative;
+            background: url(../img/Card-fm02.jpg) center center no-repeat;
+            background-size: cover;
+            flex-basis: 49.5%;
+
+            .card-info {
+                position: absolute;
+                bottom: 3%;
+                left: 3%;
+
+                span {
+                    display: block;
+                    font-size: 41px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    line-height: 40px;
+                }
+            }
+
+            a {
+                position: absolute;
+                bottom: 2%;
+                right: 3%;
+                display: inline-block;
+                margin-top: 10px;
+                padding: 5px;
+                color: #ffffff;
+                font-weight: 700;
+                border-bottom: 1px solid #fff;
+                background-size: 100% 100% 0;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #000000;
+                    background: #fff;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+
+    .rail {
+        display: flex;
+        justify-content: space-between;
+        height: 660px;
+        margin: 20px 0 110px;
+
+        .rail-img01 {
+            position: relative;
+            background: url(../img/01_Rail_Category_woman_DT.webp) center center;
+            background-size: cover;
+            width: 32.5%;
+
+            a {
+                position: absolute;
+                display: block;
+                font-weight: 700;
+                font-size: 32px;
+                bottom: -9%;
+                left: 4%;
+            }
+        }
+
+        .rail-img02 {
+            position: relative;
+            background: url(../img/02_Rail_Category_woman_DT.webp) center center;
+            background-size: cover;
+            width: 32.5%;
+
+            a {
+                position: absolute;
+                display: block;
+                font-weight: 700;
+                font-size: 32px;
+                bottom: -9%;
+                left: 4%;
+            }
+        }
+
+        .rail-img03 {
+            position: relative;
+            background: url(../img/03_Rail_Category_woman_DT.webp) center center;
+            background-size: cover;
+            width: 32.5%;
+
+            a {
+                position: absolute;
+                display: block;
+                font-weight: 700;
+                font-size: 32px;
+                bottom: -9%;
+                left: 4%;
+            }
+        }
+    }
+}
+
+//컨텐츠01 끝
+
+//컨텐츠02 
+.contents02 {
+    .con-swiper-container {
+        .con-swiper-wrapper {
+            position: relative;
+            padding: 100px 0;
+            height: 467px;
+            width: 100%;
+            background: #1b1b1b;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: -8%;
+                transform: rotate(-90deg);
+                content: "Pracasphere__News";
+                color: #ffffff;
+                font-size: 33px;
+                font-weight: 700;
+
+            }
+
+            .con-swiper-slide {
+                position: relative;
+                margin: auto;
+                width: 966px;
+                height: 100%;
+
+                .img01 {
+                    width: inherit;
+                    height: inherit;
+                    background: url(../img/bottom_slide01.webp);
+                    background-size: contain;
+                }
+
+                .info {
+                    h3 {
+                        position: absolute;
+                        left: 2%;
+                        bottom: 3%;
+                        font-size: 40px;
+                        font-weight: bolder;
+                        color: #ffffff;
+                    }
+
+                    a {
+                        position: absolute;
+                        bottom: -9%;
+                        right: .5%;
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 5px;
+                        color: #ffffff;
+                        font-weight: 700;
+                        border-bottom: 1px solid #fff;
+                        background-size: 100% 100% 0;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: #000000;
+                            background: #fff;
+                            background-size: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//컨텐츠02 끝
+
+//스토어
+.store {
+    margin: 20px 0;
+
+    a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 532px;
+        background: url(../img/Store_module_DT.webp) center center;
+        background-size: cover;
+
+        .store-info {
+            position: absolute;
+            bottom: 5%; left: 2%;
+            .tit {
+                font-size: 40px;
+                color: #ffffff;
+                font-weight: 700;
+            }
+
+            .desc {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+
+//푸터
+.footer {
+    position: relative;
+    .fbox {
+        margin-left: 20px;
+        .logo {
+            display: block;
+            margin: 70px 0 55px;
+            width: 75px;
+            height: 14px;
+            background: url(../icon/logo_prada_b.svg) no-repeat;
+        }
+        .list {
+            display: flex;
+            align-items: flex-start;
+            ul {
+                display: inline-block;
+                width: 330px;
+      
+                strong {
+                    display: block;
+                    padding: 0 0 20px;
+                }
+            }
+        }
+        address {
+            padding: 25px 0 15px;
+            font-style: normal;
+        }
+        p {
+            display: block;
+            margin-bottom: 40px;
+            font-size: 11px;
+        }
+    }
+    .sns {
+        position: absolute;
+        right: -8%; top: 30%;
+        transform: rotate(-90deg);
+        font-size: 12px;
+        font-weight: 700;
+        a {
+            padding-right: 5px;
         }
     }
 }
