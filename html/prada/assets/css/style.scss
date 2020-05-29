@@ -201,6 +201,7 @@
     margin: 0 130px;
 }
 
+//컨텐츠01
 .contents01 {
 
 
@@ -327,7 +328,60 @@
         }
     }
 
-    
-}
+    .rail {
+        display: flex;
+        justify-content: space-between;
+        height: 660px;
+        margin: 20px 0;
 
-//컨텐츠 끝
+        .rail-img01 {
+            position: relative;
+            background: url(../img/01_Rail_Category_woman_DT.webp) center center;
+            background-size: cover;
+            width: 32.5%;
+            
+            a {
+                position: absolute;
+                display: block;
+                font-weight: 700;
+                font-size: 32px;
+                bottom: -9%;
+                left: 4%;
+            }
+        }
+        .rail-img02 {
+            position: relative;
+            background: url(../img/02_Rail_Category_woman_DT.webp) center center;
+            background-size: cover;
+            width: 32.5%;
+            
+            a {
+                position: absolute;
+                display: block;
+                font-weight: 700;
+                font-size: 32px;
+                bottom: -9%;
+                left: 4%;
+            }
+        }
+        .rail-img03 {
+            position: relative;
+            background: url(../img/03_Rail_Category_woman_DT.webp) center center;
+            background-size: cover;
+            width: 32.5%;
+            
+            a {
+                position: absolute;
+                display: block;
+                font-weight: 700;
+                font-size: 32px;
+                bottom: -9%;
+                left: 4%;
+            }
+        }
+    }
+}
+//컨텐츠01 끝
+
+//컨텐츠02 
+//컨텐츠02 끝

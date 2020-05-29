@@ -323,4 +323,63 @@
   background: #fff;
   background-size: 100%;
 }
+
+.contents01 .rail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 660px;
+  margin: 20px 0;
+}
+
+.contents01 .rail .rail-img01 {
+  position: relative;
+  background: url(../img/01_Rail_Category_woman_DT.webp) center center;
+  background-size: cover;
+  width: 32.5%;
+}
+
+.contents01 .rail .rail-img01 a {
+  position: absolute;
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  bottom: -9%;
+  left: 4%;
+}
+
+.contents01 .rail .rail-img02 {
+  position: relative;
+  background: url(../img/02_Rail_Category_woman_DT.webp) center center;
+  background-size: cover;
+  width: 32.5%;
+}
+
+.contents01 .rail .rail-img02 a {
+  position: absolute;
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  bottom: -9%;
+  left: 4%;
+}
+
+.contents01 .rail .rail-img03 {
+  position: relative;
+  background: url(../img/03_Rail_Category_woman_DT.webp) center center;
+  background-size: cover;
+  width: 32.5%;
+}
+
+.contents01 .rail .rail-img03 a {
+  position: absolute;
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  bottom: -9%;
+  left: 4%;
+}
 /*# sourceMappingURL=style.css.map */
