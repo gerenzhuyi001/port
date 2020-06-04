@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        ul {
+            padding: 10px 20px;
+        }
+
+        body {
+            background: url(../slider/img/00.png) no-repeat center center;
+            background-size: cover;
+            font-family: 'Abel', 'GmarketSansMedium';
+            color: #fff;
+            height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(50, 37, 11, 0.86);
+            z-index: -1;
+        }
+
+        .info {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .info h1 {
+            margin-bottom: 10px;
+        }
+
+        .info2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .info2 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .info2 li a {
+            color: #ffffff;
+        }
+
+        .info2 li.active a {
+            border-bottom: 1px dashed #fff;
+        }
+
+        .info3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .info3 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .info3 li a {
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        /* slide */
+        .slide-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .slide-img {
+            position: relative;
+            width: 1000px;
+            height: 600px;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, .5);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .slide-img .slides {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info">
+        <h1>Mouse Effect01</h1>
+        <p>마우스 따라다니기</p>
+        <ul>
+            <li>clientX, clientY</li>
+        </ul>
+    </div>
+
+    <div class="info2">
+        <ul>
+            <li class="active"><a href="effect01.html">Mouse01</a></li>
+            <li><a href="effect02.html">Mouse02</a></li>
+            <li><a href="effect03.html">Mouse03</a></li>
+            <li><a href="effect04.html">Mouse04</a></li>
+            <li><a href="effect05.html">Mouse05</a></li>
+            <li><a href="effect06.html">Mouse06</a></li>
+        </ul>
+    </div>
+
+    <div class="info3">
+        <ul>
+            <li>clientX : <span>0</span> </li>
+            <li>clientY : <span>0</span> </li>
+            <li>offsetX : <span>0</span> </li>
+            <li>offsetY : <span>0</span> </li>
+            <li>pageX : <span>0</span> </li>
+            <li>pageY : <span>0</span> </li>
+            <li>screenX : <span>0</span> </li>
+            <li>screenY : <span>0</span> </li>
+        </ul>
+    </div>
+</body>
+
+</html>

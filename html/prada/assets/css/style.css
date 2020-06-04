@@ -1,4 +1,4 @@
-#ghost-header {
+#header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -8,123 +8,132 @@
   transition: all .7s ease;
 }
 
-#ghost-header .ghost-header-left {
-  position: relative;
-  padding: 25px 40px 0;
-  width: 600px;
-  margin-left: 112px;
-  display: inline-block;
+#header .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px 140px 0 120px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#ghost-header .ghost-header-left .ghost-header-logo-w {
+#header .row .left {
+  position: relative;
+  width: 75%;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#header .row .left .logo-w {
   display: inline-block;
   width: 166px;
 }
 
-#ghost-header .ghost-header-left .ghost-header-logo-w span {
+#header .row .left .logo-w span {
   display: inline-block;
   width: 166px;
   height: 26px;
   background-image: url(../icon/logo_prada_w.svg);
 }
 
-#ghost-header .ghost-header-left .ghost-header-left-list-ul {
+#header .row .left ul {
   position: absolute;
   bottom: 3px;
   margin-left: 2px;
   display: inline-block;
 }
 
-#ghost-header .ghost-header-left .ghost-header-left-list-ul .ghost-header-left-list-li {
+#header .row .left ul li {
   display: inline-block;
 }
 
-#ghost-header .ghost-header-left .ghost-header-left-list-ul .ghost-header-left-list-li .ghost-header-left-list-a {
+#header .row .left ul li a {
   margin-left: 23px;
   font-size: 13px;
   font-weight: bold;
   color: #ffffff;
 }
 
-#ghost-header .ghost-header-right {
+#header .row .right {
   display: inline-block;
   float: none;
-  padding-top: 25px;
-  margin-left: 570px;
+  width: 25%;
+  text-align: right;
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a {
+#header .row .right a {
   display: inline-block;
   color: #fff;
   font-size: 11px;
   padding: 10px 7px 5px;
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a .ghost-header-right-icon {
+#header .row .right a .icon {
   display: inline-block;
   width: 20px;
   height: 20px;
   background-size: contain;
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a .ghost-header-right-call-icon {
+#header .row .right a .call {
   background-image: url(../icon/icon_phone-white.svg);
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a .ghost-header-right-user-icon {
+#header .row .right a .user {
   background-image: url(../icon/icon-user-white.svg);
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a .ghost-header-right-heart-icon {
+#header .row .right a .heart {
   background-image: url(../icon/icon-favorite-white.svg);
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a .ghost-header-right-sbag-icon {
+#header .row .right a .sbag {
   background-image: url(../icon/icon-shopping-bag-white.svg);
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-a .ghost-header-right-search-icon {
+#header .row .right a .search {
   background-image: url(../icon/icon-search-white.svg);
 }
 
-#ghost-header .ghost-header-right .ghost-header-right-call-languge {
+#header .row .right .call-languge {
   position: relative;
   bottom: 3px;
 }
 
-#ghost-header.notghost {
+#header.scroll {
   background: #fff;
 }
 
-#ghost-header.notghost .ghost-header-left .ghost-header-left-list-ul .ghost-header-left-list-li a {
+#header.scroll .left ul li a {
   color: #000000;
 }
 
-#ghost-header.notghost .ghost-header-left .ghost-header-logo-w span {
+#header.scroll .left .logo-w span {
   background-image: url(../icon/logo_prada_b.svg);
 }
 
-#ghost-header.notghost .ghost-header-right a {
+#header.scroll .right a {
   color: #000000;
 }
 
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-call-icon {
+#header.scroll .right a .call {
   background-image: url(../icon/icon_phone-black.svg);
 }
 
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-user-icon {
+#header.scroll .right a .user {
   background-image: url(../icon/icon-user-black.svg);
 }
 
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-heart-icon {
+#header.scroll .right a .heart {
   background-image: url(../icon/icon-favorite-black.svg);
 }
 
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-sbag-icon {
+#header.scroll .right a .sbag {
   background-image: url(../icon/icon-shopping-bag-black.svg);
 }
 
-#ghost-header.notghost .ghost-header-right a span.ghost-header-right-search-icon {
+#header.scroll .right a .search {
   background-image: url(../icon/icon-search-black.svg);
 }
 
@@ -134,12 +143,27 @@
 
 #banner .swiper-container .swiper-wrapper .swiper-slide {
   position: relative;
+  height: 920px;
 }
 
-#banner .swiper-container .swiper-wrapper .swiper-slide .img {
+#banner .swiper-container .swiper-wrapper .swiper-slide .img01 {
   height: 920px;
   width: 100%;
   background: url(../img/main-banner01.jpg) center center;
+  background-size: cover;
+}
+
+#banner .swiper-container .swiper-wrapper .swiper-slide .img02 {
+  height: 920px;
+  width: 100%;
+  background: url(../img/main-banner02.jpg) center center;
+  background-size: cover;
+}
+
+#banner .swiper-container .swiper-wrapper .swiper-slide .img03 {
+  height: 920px;
+  width: 100%;
+  background: url(../img/main-banner03.jpg) center center;
   background-size: cover;
 }
 

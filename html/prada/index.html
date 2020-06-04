@@ -18,7 +18,7 @@
     <meta property="og:image" content="/etc/designs/pradanux/clientlib-bundle-assets/resources/images/logo-black.png" />
     <meta property="fb:app_id" content="235920363232268" />
 
-    <meta property="og:image:width" content="166" />
+<meta property="og:image:width" content="166" />
     <meta property="og:image:heigth" content="26" />
 
     <title>프라다 공식 사이트 | 1913년부터 패션을 생각합니다 | PRADA</title>
@@ -34,33 +34,28 @@
 
 <body>
     <!-- header -->
-    <header id="ghost-header">
-        <div class="ghost-header-left">
-            <a href="https://www.prada.com/kr/ko.html" class="ghost-header-logo-w"><span></span></a>
-            <ul class="ghost-header-left-list-ul">
-                <li class="ghost-header-left-list-li"><a href="#"
-                        class="ghost-header-left-list-a ghost-header-left-list-hi">하이라이트</a></li>
-                <li class="ghost-header-left-list-li"><a href="#"
-                        class="ghost-header-left-list-a  ghost-header-left-list-female">여성</a></li>
-                <li class="ghost-header-left-list-li"><a href="#"
-                        class="ghost-header-left-list-a  ghost-header-left-list-male">남성</a></li>
-                <li class="ghost-header-left-list-li"><a href="https://www.prada.com/kr/ko/pradasphere.html"
-                        class="ghost-header-left-list-a  ghost-header-left-list-pradasphere">프라다스피어</a></li>
-            </ul>
+    <header id="header">
+        <div class="row">
+            <div class="left">
+                <a href="https://www.prada.com/kr/ko.html" class="logo-w"><span></span></a>
+                <ul>
+                    <li><a href="#" class="hi">하이라이트</a></li>
+                    <li><a href="#" class="female">여성</a></li>
+                    <li><a href="#" class="male">남성</a></li>
+                    <li><a href="https://www.prada.com/kr/ko/pradasphere.html"
+                            class="pradasphere">프라다스피어</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <a href="#" class="call-languge">Korea, Republic Of/Korean</a>
+                <a href="#"><span class="icon call"></span></a>
+                <a href="#"><span class="icon user"></span></a>
+                <a href="#"><span class="icon heart"></span></a>
+                <a href="#"><span class="icon sbag"></span></a>
+                <a href="#"><span class="icon search"></span></a>
+            </div>
         </div>
-        <div class="ghost-header-right">
-            <a href="#" class="ghost-header-right-a ghost-header-right-call-languge">Korea, Republic Of/Korean</a>
-            <a href="#" class="ghost-header-right-a"><span
-                    class="ghost-header-right-icon ghost-header-right-call-icon"></span></a>
-            <a href="#" class="ghost-header-right-a ghost-header-right-user-icon"><span
-                    class="ghost-header-right-icon ghost-header-right-user-icon"></span></a>
-            <a href="#" class="ghost-header-right-a "><span
-                    class="ghost-header-right-icon ghost-header-right-heart-icon"></span></a>
-            <a href="#" class="ghost-header-right-a"><span
-                    class="ghost-header-right-icon ghost-header-right-sbag-icon"></span></a>
-            <a href="#" class="ghost-header-right-a"><span class="ghost-header-right-icon
-            ghost-header-right-search-icon"></span></a>
-        </div>
+        
     </header>
     <!-- //header -->
     <!-- banner -->
@@ -69,7 +64,25 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="img"></div>
+                        <div class="img01"><img src="assets/img/main-banner01.jpg" alt=""></div>
+                        <div class="info">
+                            <h3>온라인 익스클루시브</h3>
+                            <p>제한된 시간 동안만 구매할s 수 있는 특별한 <br>
+                                온라인 익스클루시브 캡슐 컬렉션을 선보입니다.</p>
+                            <a href="#">구매 하기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img02"></div>
+                        <div class="info">
+                            <h3>온라인 익스클루시브</h3>
+                            <p>제한된 시간 동안만 구매할 수 있는 특별한 <br>
+                                온라인 익스클루시브 캡슐 컬렉션을 선보입니다.</p>
+                            <a href="#">구매 하기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img03"></div>
                         <div class="info">
                             <h3>온라인 익스클루시브</h3>
                             <p>제한된 시간 동안만 구매할 수 있는 특별한 <br>
@@ -78,8 +91,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
     </div>
+
     </section>
     </div>
     <!-- //banner -->
@@ -210,7 +227,7 @@
         // 슬라이드 헤더
         let wHeight = $(window).height(); //1000 브라우저
         let dHeight = $(document).height(); //6000 컨텐츠
-        let hHeight = $("#ghost-header").outerHeight(); //240 헤더
+        let hHeight = $("#header").outerHeight(); //240 헤더
 
         let moveScroll; //스크롤 값 감지 위한 변수
         let lastScrollTop = 0; //스크롤 마지막 위치 값
@@ -232,16 +249,18 @@
             let wScroll = $(this).scrollTop();
             // 스크롤을 내렸을 때
             if (wScroll > hHeight) {
-                $("#ghost-header").addClass("notghost");
+                $("#header").addClass("scroll");
             } else {
                 // 스크롤 올렸을 때
                 if (wScroll + wHeight < dHeight) {
-                    $("#ghost-header").removeClass("notghost");
+                    $("#header").removeClass("scroll");
                 }
             }
             lastScrollTop = wScroll
         }
         // 슬라이드 헤더 끝
+
+
     </script>
 </body>
 
