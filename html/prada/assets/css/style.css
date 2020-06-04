@@ -149,22 +149,16 @@
 #banner .swiper-container .swiper-wrapper .swiper-slide .img01 {
   height: 920px;
   width: 100%;
-  background: url(../img/main-banner01.jpg) center center;
-  background-size: cover;
 }
 
 #banner .swiper-container .swiper-wrapper .swiper-slide .img02 {
   height: 920px;
   width: 100%;
-  background: url(../img/main-banner02.jpg) center center;
-  background-size: cover;
 }
 
 #banner .swiper-container .swiper-wrapper .swiper-slide .img03 {
   height: 920px;
   width: 100%;
-  background: url(../img/main-banner03.jpg) center center;
-  background-size: cover;
 }
 
 #banner .swiper-container .swiper-wrapper .swiper-slide .info {
@@ -282,6 +276,10 @@
   font-weight: 700;
   color: #ffffff;
   line-height: 40px;
+}
+
+.contents01 .card .img01 .card-info p {
+  opacity: 0;
 }
 
 .contents01 .card .img01 a {

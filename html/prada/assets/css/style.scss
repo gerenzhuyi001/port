@@ -155,20 +155,20 @@
                 .img01 {
                     height: 920px;
                     width: 100%;
-                    background: url(../img/main-banner01.jpg) center center;
-                    background-size: cover;
+                    // background: url(../img/main-banner01.jpg) center center;
+                    // background-size: cover;
                 }
                 .img02 {
                     height: 920px;
                     width: 100%;
-                    background: url(../img/main-banner02.jpg) center center;
-                    background-size: cover;
+                    // background: url(../img/main-banner02.jpg) center center;
+                    // background-size: cover;
                 }
                 .img03 {
                     height: 920px;
                     width: 100%;
-                    background: url(../img/main-banner03.jpg) center center;
-                    background-size: cover;
+                    // background: url(../img/main-banner03.jpg) center center;
+                    // background-size: cover;
                 }
 
                 .info {
@@ -289,6 +289,7 @@
                     color: #ffffff;
                     line-height: 40px;
                 }
+                p {opacity: 0;}
             }
 
             a {
