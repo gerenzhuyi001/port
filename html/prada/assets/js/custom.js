@@ -1,1 +1,5 @@
-var swiper = new Swiper('.swiper-container');
+var mySwiper = new Swiper('.swiper-container', {
+    // loop: true,
+    // slidesPerView: 'auto',
+    slidesPerView: 1,
+});
